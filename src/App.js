@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom'
+import Welcome from './pages/Welcome';
+import UserCard from './pages/UserCard';
+import Nav from './components/Nav';
+import About from './pages/About';
+import Table from './pages/Table';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Welcome />
+          </Route>
+          <Route exact path="/usercard">
+            <UserCard />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/table">
+            <Table />
+          </Route>
+          {/* <Route
+            path="/price/:symbol"
+            render={(routerProps) => <Price {...routerProps} />}
+          /> */}
+          {/* <Price /> */}
+          {/* </Route> */}
+        </Switch>
     </div>
   );
 }
