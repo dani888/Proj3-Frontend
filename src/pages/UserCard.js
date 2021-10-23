@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import "./Card.css";
+// import "../Card.css";
 
 const UserCard = () => {
   const [state, setState] = useState({
@@ -8,7 +8,9 @@ const UserCard = () => {
     newUser: {
     userName: "",
     nickName: "",
-    employed: "",
+    linkedIn: "",
+    portfolio: "",
+    employed: false,
     companyName: "",
     jobTitle: "",
     hobbies: ""
@@ -19,7 +21,9 @@ const UserCard = () => {
     {
       userName: "",
       nickName: "",
-      employed: "",
+      linkedIn: "",
+      portfolio: "",
+      employed: false,
       companyName: "",
       jobTitle: "",
       hobbies: ""
@@ -53,7 +57,9 @@ const UserCard = () => {
       newUser: {
         userName: "",
         nickName: "",
-        employed: "",
+        linkedIn: "",
+        portfolio: "",
+        employed: false,
         companyName: "",
         jobTitle: "",
         hobbies: ""
@@ -77,12 +83,13 @@ const UserCard = () => {
   }, []);
 
   return (
+    <div className="usercard">
     <section className="section">
       <h2>HELLO USER</h2>
       <hr />
       {state.users.map((u) => (
         <article key={u.userName}>
-          <div>{u.userName}</div> <div>{u.userName}</div>
+          <div>{u.userName}</div> <div>{u.nickName}</div>
         </article>
       ))}
       <hr />
@@ -96,10 +103,18 @@ const UserCard = () => {
           <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
         </label>
         <label>
+          <span>LINKEDIN</span>
+          <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+        </label>
+        <label>
+          <span>PORTFOLIO</span>
+          <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+        </label>
+        <label>
           <span>EMPLOYED?</span>
           <select name="employed" value={state.newUser.employed} onChange={handleChange}>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
             {/* <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option> */}
@@ -117,10 +132,11 @@ const UserCard = () => {
           <span>HOBBIES</span>
           <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
         </label>
-        <button>ADD PROFILE CARD</button>
+        <button className="buttoncard">ADD PROFILE CARD</button>
       </form>
       {/* <button onClick={getSkills}>Get Skills</button> */}
     </section>
+    </div>
   );
 }
 

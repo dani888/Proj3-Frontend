@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import About from './pages/About';
 import Table from './pages/Table';
 import "./Card.css";
+import "./About.css";
 
 function App() {
   return (
@@ -24,12 +25,6 @@ function App() {
           <Route exact path="/table">
             <Table />
           </Route>
-          {/* <Route
-            path="/price/:symbol"
-            render={(routerProps) => <Price {...routerProps} />}
-          /> */}
-          {/* <Price /> */}
-          {/* </Route> */}
         </Switch>
     </div>
   );
