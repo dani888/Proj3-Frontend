@@ -5,6 +5,7 @@ import UserCard from './pages/UserCard';
 import Nav from './components/Nav';
 import About from './pages/About';
 import Table from './pages/Table';
+import "./Card.css";
 
 function App() {
   return (
