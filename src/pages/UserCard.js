@@ -70,7 +70,7 @@ const UserCard = () => {
   // we need to make an HTTP request localhost:3001/api/skills
   // once we recieve the data, we will use it to set our component state with skills data
   async function getUsers() {
-    const response = await fetch('http://localhost:3001/api/card/');
+    const response = await fetch('http://localhost:3001/api/table/');
     const users = await response.json();
     setState((prevState) => ({
       users,
@@ -82,6 +82,7 @@ const UserCard = () => {
     getUsers();
   }, []);
 
+
   return (
     <div className="usercard">
     <section className="section">
@@ -89,7 +90,8 @@ const UserCard = () => {
       <hr />
       {state.users.map((u) => (
         <article key={u.userName}>
-          <div>{u.userName}</div> <div>{u.nickName}</div>
+          <div>{u.userName}</div> 
+          <div>{u.nickName}</div>
         </article>
       ))}
       <hr />

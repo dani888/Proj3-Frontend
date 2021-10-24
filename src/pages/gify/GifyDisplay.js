@@ -13,7 +13,7 @@ const GifyDisplay = ({gify}) => {
   };
   
   const loading = () => {
-    return <h1>Click To Display</h1>;
+    return <h3>Click To Display</h3>;
   };
 
   // ternary operator will determine which functions JSX we will return

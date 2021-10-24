@@ -7,6 +7,7 @@ import About from './pages/About';
 import Table from './pages/Table';
 import "./Card.css";
 import "./About.css";
+import "./Table.css";
 
 function App() {
   return (

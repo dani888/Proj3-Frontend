@@ -1,0 +1,64 @@
+.table {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1582135739786-3bceafcaea85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 120vh;
+  /* display: grid; */
+  justify-items: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Bebas Neue";
+}
+
+/* Tables
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+table {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+}
+
+th,
+td {
+  width: 30%;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: rgb(40, 40, 40, 0.8);
+  border-radius: 10px;
+  color: white;
+}
+th {
+  color: #04aa6d;
+}
+hr {
+  width: 80%;
+}

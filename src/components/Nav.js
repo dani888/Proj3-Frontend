@@ -15,6 +15,9 @@ const Nav = (props) => {
       <Link to="/about">
         <div>About</div>
       </Link>
+      <Link className="login" to="/login">
+        <div>Login</div>
+      </Link>
     </div>
   );
 };

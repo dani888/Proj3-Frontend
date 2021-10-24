@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 .nav {
   display: flex;
@@ -20,7 +20,9 @@ code {
   color: white;
   padding: 15px;
   font-size: 1.1em;
-  width: 100vw;
+  font-weight: bold;
+  width: 100%;
+  display: block;
   position: fixed;
   top: 0;
   z-index: 1030;
@@ -30,4 +32,9 @@ code {
   color: white;
   margin-left: 20px;
   text-decoration: none;
+  float: left;
+}
+a.login {
+  float: right;
+  /* font-size: 25px; */
 }
