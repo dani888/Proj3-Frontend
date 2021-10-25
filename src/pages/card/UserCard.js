@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link } from "react-router-dom";
 // import "../Card.css";
 
 const UserCard = () => {
@@ -91,7 +92,12 @@ const UserCard = () => {
       {state.users.map((u) => (
         <article key={u.userName}>
           <div>{u.userName}</div> 
-          <div>{u.nickName}</div>
+          <div>{u.jobTitle}</div>
+          <div>
+          <Link to={`/table/${u._id}`}>
+            Details
+          </Link>
+          </div> 
         </article>
       ))}
       <hr />

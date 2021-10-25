@@ -37,33 +37,30 @@ const Table = (props) => {
         <br /><br /><br />
         <h1>This is the Table Component</h1>
         <hr />
+        <table>
+            <thead>
+                    <tr>
+                        <th>userName</th>
+                        <th>nickName</th>
+                        <th>companyName:</th>
+                    </tr>
+            </thead>
         {state.users.map((u) => (
-        <div>
-            <table>
-                {/* <thead>
-                        <tr>
-                            <th>userName</th>
-                            <th>nickName</th>
-                            <th>companyName:</th>
-                        </tr>
-                </thead> */}
-                <tr>
-                    <td>
-                        {u.userName}
-                    </td>
-                    
-                    <td>
-                        {u.nickName}
-                    </td>
-                    
-                    <td>
-                        {u.companyName}
-                    </td>
-                </tr>
-            </table>
-            <hr />
-        </div>
+            <tr>
+                <td>
+                    {u.userName}
+                </td>
+                
+                <td>
+                    {u.nickName}
+                </td>
+                
+                <td>
+                    {u.companyName}
+                </td>
+            </tr>
       ))}
+      </table>
       
     </div>
   )

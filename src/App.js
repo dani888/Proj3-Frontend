@@ -1,13 +1,18 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
-import Welcome from './pages/Welcome';
-import UserCard from './pages/UserCard';
+import Welcome from './pages/welcome/Welcome';
+import UserCard from './pages/card/UserCard';
 import Nav from './components/Nav';
-import About from './pages/About';
-import Table from './pages/Table';
-import "./Card.css";
-import "./About.css";
-import "./Table.css";
+import About from './pages/about/About';
+import Table from './pages/table/Table';
+import Show from './pages/show/show';
+// css imports =>
+import "./pages/card/Card.css";
+import "./pages/about/About.css";
+import "./pages/table/Table.css";
+import "./pages/show/show.css";
+import "./pages/welcome/welcome.css";
+//
 
 function App() {
   return (
@@ -26,6 +31,10 @@ function App() {
           <Route exact path="/table">
             <Table />
           </Route>
+          <Route exact path="/table/:id" render={(routerProps) => <Show {...routerProps} />}
+          />
+            {/* // <Table />
+          // </Route> */}
         </Switch>
     </div>
   );

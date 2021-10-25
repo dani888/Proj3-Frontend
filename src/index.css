@@ -36,5 +36,6 @@ body {
 }
 a.login {
   float: right;
+  margin-right: 10px;
   /* font-size: 25px; */
 }
