@@ -7,27 +7,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
-
 .nav {
-  display: flex;
+  /* display: flex; */
   /* justify-content: space-around; */
   padding: 0px 20px;
-  background-color: Purple;
-  color: white;
+  background-color: #303030;
+  /* color: white; */
   padding: 15px;
   font-size: 1.1em;
   font-weight: bold;
   width: 100%;
   display: block;
   position: fixed;
-  top: 0;
+  /* top: 0; */
   z-index: 1030;
+  border-radius: 5px;
 }
-
+.nav a.active {
+  background-color: green;
+  height: 2px;
+  color: white;
+}
+.nav a:hover:not(.active) {
+  background-color: green;
+  height: 2px;
+  color: white;
+  border-radius: 20px;
+}
 .nav a {
   color: white;
   margin-left: 20px;

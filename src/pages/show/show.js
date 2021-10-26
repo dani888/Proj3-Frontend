@@ -8,8 +8,8 @@ const Show = (props) => {
     console.log('this is location', location)
     const path = location.pathname
     const id = props.match.params;
-    console.log('id is: ', id)
-    const URL = `http://localhost:3001/api/table/${id}`;
+    // console.log('id is: ', id)
+    // const URL = `http://localhost:3001/api/table/${id}`;
     // const id = props.match.params
     // console.log(id)
 
@@ -27,51 +27,41 @@ const Show = (props) => {
         hobbies: ""
         }
       });
-      console.log('this is state: ', state.user)
+      
     
       // we need to make an HTTP request localhost:3001/api/skills
       // once we recieve the data, we will use it to set our component state with skills data
-      async function getuser() {
-        const response = await fetch(`http://localhost:3001/api${path}`);
-        const user = await response.json();
-        console.log(user)
-        setState((prevState) => ({
-          user,
-          newUser: prevState.newUser
-        }));
-      }
+      useEffect(() => {
+        async function getUser() {
+          const response = await fetch(`http://localhost:3001/api${path}`);
+          const user = await response.json();
+          console.log('this is user', user)
+          setState((prevState) => ({
+            user,
+            newUser: prevState.newUser
+          }));
+        }
+        getUser();
+       }, []);
+      
+      console.log('this is state: ', state.user)
 //////
+      
       const deleteCard = async (userId) => {
         // make delete request to create usercard
         await fetch(`http://localhost:3001/api${path}`, {
           method: "DELETE",
         });
         // update list of usercards
-        getuser();
-      };
-    
-      const removeCard = () => {
-        deleteCard(state.user._id);
+        // getUser();
         props.history.push("/usercard");
       };
-////// 
-        const updateCard = async (state, id) => {
-            // make put request to create people
-            await fetch(URL + id, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "Application/json",
-            },
-            body: JSON.stringify(state),
-            });
-            // update list of people
-            getuser();
-        };
-      
-      useEffect(() => {
-        getuser();
-      }, []);
 
+      const removeCard = () => {
+        deleteCard(state.user._id);
+      };
+      
+////// 
 
 return ( 
     <div className="show">
@@ -98,8 +88,9 @@ return (
             <button className="buttonskel" onClick={removeCard}>
                 DELETE
             </button>
+            <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
             </div>
-            {/* <button onclick="window.location.href='/classes'">Back</button> */}
+
         </div>
     </div>
   )

@@ -1,0 +1,45 @@
+.width {
+  max-width: 450px;
+}
+
+.edit {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 120vh;
+  /* display: grid; */
+  /* justify-items: center;
+      align-items: center; */
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Bebas Neue";
+  text-align: left;
+}
+.editform {
+  margin-left: 10px;
+}
+
+.buttoncard2 {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 auto;
+  padding: 0.4rem;
+  background-color: #f17d80;
+  color: white;
+  border: none;
+  outline: none;
+  float: left;
+  margin-left: 24.5%;
+}
+
+button:hover {
+  color: white;
+  background-color: #737495;
+}

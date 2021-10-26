@@ -46,6 +46,7 @@ const Table = (props) => {
                     </tr>
             </thead>
         {state.users.map((u) => (
+          <tbody key={u.userName}>
             <tr>
                 <td>
                     {u.userName}
@@ -59,6 +60,7 @@ const Table = (props) => {
                     {u.companyName}
                 </td>
             </tr>
+          </tbody>
       ))}
       </table>
       

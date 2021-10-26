@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import GifyDisplay from "../gify/GifyDisplay";
-import Form from "../gify/Form";
+import GifyDisplay from "./gify/GifyDisplay";
+import Form from "./gify/Form";
 
 const About = (props) => {
     const API_KEY = "l0KZOOozi5WzYwHuxm2Zb7clklEE19Yv";
@@ -27,12 +27,12 @@ const About = (props) => {
        <br />
        <div className="textbox">
         <h1><u>About Hello USER</u></h1>
-        <ul>
-            <li><p>This Application is an experimentation, using Authentication with Goolge firebase, </p></li>
-            <li><p>Using two differnt databases, Firebase and MongoDb </p></li>
-            <li><p>Using react components and forms. referecing differnt models.</p></li>
-            <li><p>The Goal of this application is to organize and store user data efficently. As well as experiment implementing extra features such as a fun Api such as Gify:</p></li>
-        </ul>
+        <ol>
+            <li><p>This Application is an experimentation using Google Firebase and MongoDB.</p></li>
+            <li><p>Experimentation with states and react hooks to implement full crud, (create data/read data/update data/delete data)  </p></li>
+            <li><p>This Application is using a backend which is powering the API to feed and create data</p></li>
+            <li><p>This App experiments with using Firebase Authentication. As well as experiment implementing extra features such as an Api that generates Gifs:</p></li>
+        </ol>
         <Form getGify={getGify}/>
         <GifyDisplay gify={gify}/>
       </div>
