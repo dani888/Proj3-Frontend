@@ -60,8 +60,10 @@ label {
 }
 
 label span {
-  color: #737495;
+  /* color: #737495; */
+  color: #f17d80;
   width: 10rem;
+  font-weight: bold;
 }
 
 input,
@@ -71,7 +73,7 @@ select {
   font-size: 1rem;
   font-weight: bold;
   padding: 0.4rem;
-  color: #f17d80;
+  /* color: blue; */
   border: 2px solid #737495;
   border-radius: 0;
   outline: none;
@@ -82,8 +84,8 @@ select {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  margin: 0.5rem 0 0 auto;
-  padding: 0.4rem;
+  margin: 1.5rem 0 0 auto;
+  padding: 0.5rem;
   background-color: #f17d80;
   color: white;
   border: none;

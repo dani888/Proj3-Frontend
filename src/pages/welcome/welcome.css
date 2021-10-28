@@ -17,87 +17,6 @@
   font-family: "Bebas Neue", cursive;
 }
 
-h1 {
-  margin: 0;
-}
-h2 {
-  /* color: #f17d80; */
-  margin: 0;
-  text-align: center;
-}
-
-section > article {
-  display: flex;
-  justify-content: space-between;
-  min-width: 25rem;
-  /* max-width: 100%; */
-  color: white;
-  margin: 0.1rem;
-  background-color: #737495;
-}
-
-article > div {
-  padding: 0.5rem;
-  width: 35%;
-}
-
-article > div:nth-child(2) {
-  width: 35%;
-  background-color: #f17d80;
-  text-align: center;
-}
-article > div:nth-child(3) {
-  width: 30%;
-  background-color: lightblue;
-  text-align: center;
-}
-
-label {
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-label span {
-  color: #737495;
-  width: 10rem;
-}
-
-input,
-select {
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.4rem;
-  color: #f17d80;
-  border: 2px solid #737495;
-  border-radius: 0;
-  outline: none;
-  -webkit-appearance: none;
-}
-
-.buttoncard {
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  margin: 0.5rem 0 0 auto;
-  padding: 0.4rem;
-  background-color: #f17d80;
-  color: white;
-  border: none;
-  outline: none;
-}
-
-button:hover {
-  color: white;
-  background-color: #737495;
-}
-.section {
-  max-width: 450px;
-  margin: 0 auto;
-  /* margin-top: 0px; */
-}
 .buttonskelwel {
   display: inline-block;
   height: 38px;
@@ -129,4 +48,12 @@ button:hover {
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.logincenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 3px solid green; */
+  padding: 10px;
 }

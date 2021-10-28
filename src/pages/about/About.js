@@ -25,6 +25,7 @@ const About = (props) => {
     <div className="about">
        <br />
        <br />
+       <br />
        <div className="textbox">
         <h1><u>About Hello USER</u></h1>
         <ol>

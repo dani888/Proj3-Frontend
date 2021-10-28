@@ -1,5 +1,6 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 // import { useState, useEffect } from 'react';
 import Welcome from './pages/welcome/Welcome';
 import UserCard from './pages/card/UserCard';
@@ -8,6 +9,8 @@ import About from './pages/about/About';
 import Table from './pages/table/Table';
 import Show from './pages/show/show';
 import Edit from './pages/show/Edit/Edit';
+
+import Login from './pages/Login';
 // css imports =>
 // import "./pages/skeleton.css"
 import "./pages/card/Card.css";
@@ -18,31 +21,48 @@ import "./pages/welcome/welcome.css";
 import "./pages/show/Edit/edit.css";
 //
 
+import { auth } from './services/firebase';
+
 function App() {
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => setUser(user));
+    return () => unsubscribe(); // clean up action
+  }, [])
 
   return (
     <div className="App">
-      <Nav />
+      <Nav user={user} />
         <Switch>
           <Route exact path="/">
-            <Welcome />
+            <Welcome user={user} />
           </Route>
-          <Route exact path="/usercard">
+          {/* <Route exact path="/usercard">
             <UserCard />
-          </Route>
+          </Route> */}
+          <Route exact path="/usercard" render={() => (
+            user ? <UserCard /> : <Redirect to="/" />
+          )} />
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/table">
+          {/* <Route exact path="/table">
             <Table />
+          </Route> */}
+          <Route exact path="/table" render={() => (
+            user ? <Table />: <Redirect to="/login" />
+          )} />
+          <Route exact path="/table/:id" render={(routerProps) => (
+          user ? <Show {...routerProps} /> : <Redirect to="/login" />)}
+          />
+          <Route exact path="/table/:id/edit" render={(routerProps) => (
+          user ? <Edit {...routerProps} /> : <Redirect to="/login" />)}
+          />
+          <Route exact path="/login">
+            <Login />
           </Route>
-          <Route exact path="/table/:id" render={(routerProps) => <Show {...routerProps} />}
-          />
-          <Route exact path="/table/:id/edit" render={(routerProps) => <Edit 
-          // updatePeople={updatePeople} 
-          {...routerProps} />}
-          />
         </Switch>
     </div>
   );

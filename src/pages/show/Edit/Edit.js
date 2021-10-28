@@ -54,52 +54,52 @@ function Edit(props) {
     };
 
     return (
-        <div className="edit">
-    <br />
-    <br />
-    <br />
-    <h1>Edit Route</h1>
-    <form className="editform" onSubmit={handleSubmit}>
-        <label>
-          <span>USERNAME</span>
-          <input className="width" name="userName" value={state.user.userName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>NICKNAME</span>
-          <input className="width" name="nickName" value={state.user.nickName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>LINKEDIN</span>
-          <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} />
-        </label>
-        <label>
-          <span>PORTFOLIO</span>
-          <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>EMPLOYED?</span>
-          <select className="width" name="employed" value={state.user.employed} onChange={handleChange}>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-            {/* <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option> */}
-          </select>
-        </label>
-        <label>
-          <span>COMPANY NAME</span>
-          <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>JOB TITLE</span>
-          <input className="width" name="jobTitle" value={state.user.jobTitle} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>HOBBIES</span>
-          <input className="width" name="hobbies" value={state.user.hobbies} onChange={handleChange}/>
-        </label>
-        <button className="buttoncard2" >UPDATE PROFILE CARD</button>
-      </form>
+    <div className="edit">
+        <br />
+        <br />
+        <br />
+        <h1>Edit USER Profile</h1><br />
+            <form className="editform" onSubmit={handleSubmit}>
+                <label>
+                <span>USERNAME</span>
+                <input className="width" name="userName" value={state.user.userName} onChange={handleChange}/>
+                </label>
+                <label>
+                <span>NICKNAME</span>
+                <input className="width" name="nickName" value={state.user.nickName} onChange={handleChange}/>
+                </label>
+                <label>
+                <span>LINKEDIN</span>
+                <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} />
+                </label>
+                <label>
+                <span>PORTFOLIO</span>
+                <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange}/>
+                </label>
+                <label>
+                <span>EMPLOYED?</span>
+                <select className="width" name="employed" value={state.user.employed} onChange={handleChange}>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                    {/* <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> */}
+                </select>
+                </label>
+                <label>
+                <span>COMPANY NAME</span>
+                <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange}/>
+                </label>
+                <label>
+                <span>JOB TITLE</span>
+                <input className="width" name="jobTitle" value={state.user.jobTitle} onChange={handleChange}/>
+                </label>
+                <label>
+                <span>HOBBIES</span>
+                <input className="width" name="hobbies" value={state.user.hobbies} onChange={handleChange}/>
+                </label>
+                <button className="buttoncard2" >UPDATE PROFILE CARD</button>
+            </form>
       </div>
     )
   }

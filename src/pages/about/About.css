@@ -14,13 +14,13 @@
   align-items: center; */
   font-size: 25px;
   font-weight: bold;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Rockwell", cursive;
   /* text-align: left; */
 }
 
 .textbox {
-  margin: 0;
-  max-width: 1050px;
+  margin-top: 0;
+  max-width: 1000px;
   /* left: 50%; */
   background-color: rgb(255, 255, 255, 0.8);
   /* opacity: 0.95; */

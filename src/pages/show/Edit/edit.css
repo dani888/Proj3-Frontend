@@ -19,10 +19,18 @@
   font-size: 25px;
   font-weight: bold;
   font-family: "Bebas Neue";
-  text-align: left;
+  text-align: center;
+  justify-content: center;
 }
 .editform {
-  margin-left: 10px;
+  /* margin: 0; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+  text-align: center;
+  /* background-color: green; */
+
+  /* justify-content: center; */
 }
 
 .buttoncard2 {
@@ -35,8 +43,8 @@
   color: white;
   border: none;
   outline: none;
-  float: left;
-  margin-left: 24.5%;
+  float: right;
+  margin-right: 2.5%;
 }
 
 button:hover {
