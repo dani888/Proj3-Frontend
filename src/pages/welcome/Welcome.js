@@ -1,9 +1,23 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { signIn } from '../../services/firebase';
 // import style from "./skeleton.css";
 
 const Welcome = (props) => {
+
   console.log(props.user)
+  const history = useHistory()
+
+  async function logIN2() {
+    try{
+        await signIn()
+        history.push('/')
+    }
+    catch(error){
+        console.log('not working')
+    }
+}
+
   return ( 
     <div className="welcome">
         <div className="flex">
@@ -17,7 +31,7 @@ const Welcome = (props) => {
             :
             <>
             <h1>Welcome to Hello USER let's get you started</h1><br/><br/>
-            <Link to="/login"><button className="buttonskelwel">Log In</button></Link>
+            <Link className="login" to="/"  onClick={logIN2} ><button className="buttonskelwel">Log In</button></Link>
             </>
           }
         </div>
