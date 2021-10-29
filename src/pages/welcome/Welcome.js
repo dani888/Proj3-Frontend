@@ -30,7 +30,8 @@ const Welcome = (props) => {
             </>
             :
             <>
-            <h1>Welcome to Hello USER let's get you started</h1><br/><br/>
+            <h1>Welcome to Hello USER let's get you started</h1><br/><br />
+            {/* <h2>Please Log in</h2><br/> */}
             <Link className="login" to="/"  onClick={logIN2} ><button className="buttonskelwel">Log In</button></Link>
             </>
           }

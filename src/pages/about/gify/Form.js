@@ -14,6 +14,7 @@ const Form = (props) => {
   };
   return (
     <div>
+      <hr />
       <form onSubmit={handleSubmit}>
       <br/>
         <input className="buttonskel" type="submit" value="Get Gif" />

@@ -30,7 +30,6 @@
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  /* background-color: transparent; */
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
@@ -38,6 +37,7 @@
   color: white;
   background-color: #282828;
   max-width: 200px;
+  border-radius: 17.5px;
 }
 .flex {
   height: 100%;

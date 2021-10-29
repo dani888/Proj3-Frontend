@@ -122,6 +122,7 @@ button:hover {
   color: white;
   background-color: #282828;
   width: 150px;
+  border-radius: 17.5px;
 }
 .flex {
   height: 100%;
