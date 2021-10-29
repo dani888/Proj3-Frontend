@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Table = (props) => {
-
+  console.log('this is the table page')
     const [state, setState] = useState({
         users: [],
         // form 
@@ -16,11 +16,20 @@ const Table = (props) => {
         hobbies: ""
         }
       });
-    
+      console.log('part 2')
       // we need to make an HTTP request localhost:3001/api/skills
       // once we recieve the data, we will use it to set our component state with skills data
       async function getUsers() {
-        const response = await fetch('http://localhost:3001/api/table/');
+        console.log('part 3')
+        const token = await props.user.getIdToken();
+        const response = await fetch('http://localhost:3001/api/table/all', {
+          method: 'GET',
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
+        });
+        // console.log('part4')
+        console.log('response is : ',response)
         const users = await response.json();
         setState((prevState) => ({
           users,

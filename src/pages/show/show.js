@@ -6,7 +6,7 @@ const Show = (props) => {
 
     let location = useLocation();
     console.log('this is location', location)
-    const path = location.pathname
+    const path = location.pathname 
     const id = props.match.params;
     // console.log('id is: ', id)
     // const URL = `http://localhost:3001/api/table/${id}`;
@@ -33,9 +33,16 @@ const Show = (props) => {
       // once we recieve the data, we will use it to set our component state with skills data
       useEffect(() => {
         async function getUser() {
-          const response = await fetch(`http://localhost:3001/api${path}`);
+          if(!props.user) return;
+          const token = await props.user.getIdToken();
+          const response = await fetch(`http://localhost:3001/api${path}`, {
+                  method: 'GET',
+                  headers: {
+                'Authorization': 'Bearer ' + token
+              }
+            });
           const user = await response.json();
-          console.log('this is user', user)
+          // console.log('this is user', user)
           setState((prevState) => ({
             user,
             newUser: prevState.newUser
@@ -45,12 +52,18 @@ const Show = (props) => {
        }, []);
       
       console.log('this is state: ', state.user)
+
 //////
       
       const deleteCard = async (userId) => {
+        if(!props.user) return;
+        const token = await props.user.getIdToken();
         // make delete request to create usercard
         await fetch(`http://localhost:3001/api${path}`, {
           method: "DELETE",
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
         });
         // update list of usercards
         // getUser();

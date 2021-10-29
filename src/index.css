@@ -8,54 +8,34 @@ body {
 }
 
 .nav {
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* padding: 0px 20px; */
+  display: flex;
   background-color: #303030;
-  /* color: white; */
-  /* padding: 15px; */
   font-size: 1.2em;
   font-weight: bold;
   width: 100%;
   display: block;
   position: fixed;
-  /* top: 0; */
+  top: 0;
   z-index: 1030;
-  /* border-radius: 5px; */
-}
-.nav a.active {
-  background-color: green;
-  /* height: 2px; */
-  color: white;
 }
 
 .nav a:hover:not(.active) {
   background-color: #f17d80;
-  height: 100%;
   color: white;
-  /* border-radius: 20px; */
 }
-/* .nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  float: left;
-} */
+
 .nav a {
   color: white;
   padding: 15px;
   text-decoration: none;
   float: left;
-  /* border-bottom: 5px #303030 solid; */
 }
-.nav a.current {
-  border-bottom: 5px solid #5bf55b;
-}
+
 a.login {
   float: right;
 }
 
-img {
+.userimage {
   height: 50pxl;
   border-radius: 50%;
   height: 25px;

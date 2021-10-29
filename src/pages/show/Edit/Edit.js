@@ -15,7 +15,14 @@ function Edit(props) {
 
     useEffect(() => {
         async function getuser() {
-            const response = await fetch(URL);
+            if(!props.user) return;
+            const token = await props.user.getIdToken();
+            const response = await fetch(URL, {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+                });
             const user = await response.json();
             console.log(user)
             setState({
@@ -43,11 +50,14 @@ function Edit(props) {
 
     const updatePeople = async () => {
         // make put request to create people
-        console.log("user",state.user)
+        // console.log("user",state.user)
+        if(!props.user) return;
+        const token = await props.user.getIdToken();
         await fetch(`http://localhost:3001/api/table/${state.user._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "Application/json",
+                'Authorization': 'Bearer ' + token
             },
             body: JSON.stringify(state.user),
         })

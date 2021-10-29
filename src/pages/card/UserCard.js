@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {Link } from "react-router-dom";
 // import "../Card.css";
 
-const UserCard = () => {
+const UserCard = (props) => {
   const [state, setState] = useState({
     users: [],
     // form 
@@ -18,18 +18,6 @@ const UserCard = () => {
     }
   });
 
-  const [form, setForm] = useState(
-    {
-      userName: "",
-      nickName: "",
-      linkedIn: "",
-      portfolio: "",
-      employed: false,
-      companyName: "",
-      jobTitle: "",
-      hobbies: ""
-    });
-
   function handleChange(event) {
     // console.log(event.target.value);
     // setState({...state, skill: event.target.value })
@@ -41,15 +29,18 @@ const UserCard = () => {
   }
 
   async function handleSubmit(event) {
+    if(!props.user) return;
     event.preventDefault();
-    
+    const token = await props.user.getIdToken();
+    const data = {...state.newUser, managedBy: props.user.uid}
     await fetch('http://localhost:3001/api/card/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'Application/json'
+        'Content-Type': 'Application/json',
+        'Authorization': 'Bearer ' + token
       },
       // request body
-      body: JSON.stringify(state.newUser)
+      body: JSON.stringify(data)
     });
     getUsers();
 
@@ -66,12 +57,19 @@ const UserCard = () => {
         hobbies: ""
         }
     }))
-    // console.log("form submitted")
   }
   // we need to make an HTTP request localhost:3001/api/skills
   // once we recieve the data, we will use it to set our component state with skills data
   async function getUsers() {
-    const response = await fetch('http://localhost:3001/api/table/');
+    if(!props.user) return;
+    const token = await props.user.getIdToken();
+    console.log(token)
+    const response = await fetch('http://localhost:3001/api/table/', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    });
     const users = await response.json();
     setState((prevState) => ({
       users,
@@ -83,69 +81,75 @@ const UserCard = () => {
     getUsers();
   }, []);
 
-
-  return (
-    <div className="usercard">
-    <section className="section">
-      <h2>HELLO USER</h2>
-      <hr />
-      {state.users.map((u) => (
-        <article key={u.userName}>
-          <div>{u.userName}</div> 
-          <div>{u.jobTitle}</div>
-          <div>
-          <Link to={`/table/${u._id}`}>
-            Details
-          </Link>
-          </div> 
-        </article>
-      ))}
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>USERNAME</span>
-          <input name="userName" value={state.newUser.userName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>NICKNAME</span>
-          <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>LINKEDIN</span>
-          <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>PORTFOLIO</span>
-          <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>EMPLOYED?</span>
-          <select name="employed" value={state.newUser.employed} onChange={handleChange}>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-            {/* <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option> */}
-          </select>
-        </label>
-        <label>
-          <span>COMPANY NAME</span>
-          <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>JOB TITLE</span>
-          <input name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
-        </label>
-        <label>
-          <span>HOBBIES</span>
-          <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
-        </label>
-        <button className="buttoncard">ADD PROFILE CARD</button>
-      </form>
-      {/* <button onClick={getSkills}>Get Skills</button> */}
-    </section>
-    </div>
-  );
+  const loaded = () => {
+    return (
+      <div className="usercard">
+      <section className="section">
+        <h2>{props.user.displayName}'s</h2>
+        <h3>USER CARDS</h3>
+        <hr />
+        {state.users.map((u) => (
+          <article key={u.userName}>
+            <div>{u.userName}</div> 
+            <div>{u.jobTitle}</div>
+            <div>
+            <Link to={`/table/${u._id}`}>
+              Details
+            </Link>
+            </div> 
+          </article>
+        ))}
+        <hr />
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>USERNAME</span>
+            <input name="userName" value={state.newUser.userName} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>NICKNAME</span>
+            <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>LINKEDIN</span>
+            <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>PORTFOLIO</span>
+            <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>EMPLOYED?</span>
+            <select name="employed" value={state.newUser.employed} onChange={handleChange}>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+              {/* <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option> */}
+            </select>
+          </label>
+          <label>
+            <span>COMPANY NAME</span>
+            <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>JOB TITLE</span>
+            <input name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
+          </label>
+          <label>
+            <span>HOBBIES</span>
+            <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
+          </label>
+          <button className="buttoncard">ADD PROFILE CARD</button>
+        </form>
+        {/* <button onClick={getSkills}>Get Skills</button> */}
+      </section>
+      </div>
+    );
+  }
+  const loading = () => {
+    return <h1>Loading...</h1>;
+  };
+  return state.users ? loaded() : loading();
 }
 
 export default UserCard;

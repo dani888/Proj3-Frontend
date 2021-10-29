@@ -43,7 +43,7 @@ function App() {
             <UserCard />
           </Route> */}
           <Route exact path="/usercard" render={() => (
-            user ? <UserCard /> : <Redirect to="/" />
+            user ? <UserCard user={user} /> : <Redirect to="/usercard" />
           )} />
           <Route exact path="/about">
             <About />
@@ -52,13 +52,13 @@ function App() {
             <Table />
           </Route> */}
           <Route exact path="/table" render={() => (
-            user ? <Table />: <Redirect to="/login" />
+            user ? <Table user={user} />: <Redirect to="/table" />
           )} />
           <Route exact path="/table/:id" render={(routerProps) => (
-          user ? <Show {...routerProps} /> : <Redirect to="/login" />)}
+          user ? <Show user={user} {...routerProps} /> : <Redirect to="/usercard" />)}
           />
           <Route exact path="/table/:id/edit" render={(routerProps) => (
-          user ? <Edit {...routerProps} /> : <Redirect to="/login" />)}
+          user ? <Edit user={user} {...routerProps} /> : <Redirect to="/login" />)}
           />
           <Route exact path="/login">
             <Login />

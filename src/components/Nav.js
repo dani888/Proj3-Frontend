@@ -56,7 +56,7 @@ const Nav = (props) => {
       </Link>
       <Link className="login" to="/" >
         <div>
-            <img 
+            <img className="userimage"
                 src={props.user.photoURL} 
                 alt={props.user.displayName} 
             /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -89,7 +89,6 @@ const Nav = (props) => {
       </Link>
       <Link className="login" to="/"  onClick={logIN} >
         <div>Login</div>
-        {/* <Redirect to="/" />  */}
       </Link>
       </>
         }
