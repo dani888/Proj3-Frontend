@@ -86,16 +86,16 @@ function Edit(props) {
                 <span>PORTFOLIO</span>
                 <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange}/>
                 </label>
-                <label>
+                {/* <label>
                 <span>EMPLOYED?</span>
                 <select className="width" name="employed" value={state.user.employed} onChange={handleChange}>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
-                    {/* <option value="3">3</option>
+                    <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option> */}
+                    <option value="5">5</option>
                 </select>
-                </label>
+                </label> */}
                 <label>
                 <span>COMPANY NAME</span>
                 <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange}/>

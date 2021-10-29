@@ -60,25 +60,23 @@ label {
 }
 
 label span {
-  /* color: #737495; */
   color: #f17d80;
   width: 10rem;
   font-weight: bold;
 }
 
-input,
+/* input,
 select {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.4rem;
-  /* color: blue; */
   border: 2px solid #737495;
   border-radius: 0;
   outline: none;
   -webkit-appearance: none;
-}
+} */
 
 .buttoncard {
   display: block;
@@ -99,7 +97,6 @@ button:hover {
 .section {
   max-width: 450px;
   margin: 0 auto;
-  /* margin-top: 0px; */
 }
 .buttonskel {
   display: inline-block;
@@ -121,7 +118,9 @@ button:hover {
   box-sizing: border-box;
   color: white;
   background-color: #282828;
-  width: 150px;
+  width: auto;
+  height: auto;
+  /* max-height: 94%; */
   border-radius: 17.5px;
 }
 .flex {

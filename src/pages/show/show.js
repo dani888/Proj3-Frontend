@@ -79,7 +79,7 @@ const Show = (props) => {
 return ( 
     <div className="show">
         <div className="flex">
-            <h1>This is the show page</h1><br/>
+            <h1>{state.user.userName}'s Profile Card</h1><br/>
             <hr />
             USERNAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {state.user.userName}<br />
@@ -98,12 +98,9 @@ return (
             <hr />
             <div className="flextwo">
             <Link to="/usercard"><button className="buttonskel">Back</button></Link>
-            <button className="buttonskel" onClick={removeCard}>
-                DELETE
-            </button>
+            <Link><button className="buttonskel" onClick={removeCard}>delete</button></Link>
             <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
             </div>
-
         </div>
     </div>
   )

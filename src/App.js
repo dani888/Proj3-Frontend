@@ -19,6 +19,7 @@ import "./pages/table/Table.css";
 import "./pages/show/show.css";
 import "./pages/welcome/welcome.css";
 import "./pages/show/Edit/edit.css";
+import "./materialize/css/materialize.css"
 //
 
 import { auth } from './services/firebase';

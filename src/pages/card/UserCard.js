@@ -11,7 +11,7 @@ const UserCard = (props) => {
     nickName: "",
     linkedIn: "",
     portfolio: "",
-    employed: false,
+    // employed: false,
     companyName: "",
     jobTitle: "",
     hobbies: ""
@@ -51,7 +51,7 @@ const UserCard = (props) => {
         nickName: "",
         linkedIn: "",
         portfolio: "",
-        employed: false,
+        // employed: false,
         companyName: "",
         jobTitle: "",
         hobbies: ""
@@ -85,8 +85,8 @@ const UserCard = (props) => {
     return (
       <div className="usercard">
       <section className="section">
-        <h2>{props.user.displayName}'s</h2>
-        <h3>USER CARDS</h3>
+        <h3>{props.user.displayName}'s</h3>
+        <h5>USER CARDS</h5>
         <hr />
         {state.users.map((u) => (
           <article key={u.userName}>
@@ -117,16 +117,16 @@ const UserCard = (props) => {
             <span>PORTFOLIO</span>
             <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
           </label>
-          <label>
+          {/* <label>
             <span>EMPLOYED?</span>
             <select name="employed" value={state.newUser.employed} onChange={handleChange}>
               <option value="true">Yes</option>
               <option value="false">No</option>
-              {/* <option value="3">3</option>
+              <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5">5</option> */}
+              <option value="5">5</option>
             </select>
-          </label>
+          </label> */}
           <label>
             <span>COMPANY NAME</span>
             <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
