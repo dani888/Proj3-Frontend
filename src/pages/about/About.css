@@ -9,32 +9,26 @@
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   height: 150vh;
-  /* display: grid; */
-  /* justify-items: center;
-  align-items: center; */
   font-size: 25px;
   font-weight: bold;
-  font-family: "Rockwell", cursive;
-  /* text-align: left; */
+  font-family: Arial Narrow, sans-serif;
 }
 
 .textbox {
-  margin-top: 0;
-  max-width: 1000px;
-  /* left: 50%; */
+  max-width: 900px;
   background-color: rgb(255, 255, 255, 0.8);
-  /* opacity: 0.95; */
   text-align: center;
   margin: auto;
   width: 60%;
-  height: 100%;
-  /* border: 3px solid green; */
+  height: 135vh;
   padding: 10px;
-  /* justify-content: center; */
-  /* margin-left: 500px; */
   border-radius: 30px;
+  margin-bottom: 0;
 }
 p {
   text-align: left;
   width: 100%;
+}
+.cursive {
+  font-family: "Bebas Neue", cursive;
 }

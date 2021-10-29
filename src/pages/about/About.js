@@ -27,11 +27,12 @@ const About = (props) => {
        <br />
        <br />
        <div className="textbox">
-        <h1><u>About Hello USER</u></h1>
+        <h1><u className="cursive" >About Hello USER</u></h1>
         <ol>
+            <li><p>The Goal of this application is to efficently store user data for each user that logs and have a collection of all users in a table component </p></li>
             <li><p>This Application is an experimentation using Google Firebase and MongoDB.</p></li>
-            <li><p>Experimentation with states and react hooks to implement full crud, (create data/read data/update data/delete data)  </p></li>
-            <li><p>This Application is using a backend which is powering the API to feed and create data</p></li>
+            <li><p>Experimentating with components, props, event handlers, states and react hooks to implement full crud, (create data/read data/update data/delete data)  </p></li>
+            <li><p>This Application is using a Mongoose backend which is powering the API data</p></li>
             <li><p>This App experiments with using Firebase Authentication. As well as experiment implementing extra features such as an Api that generates Gifs:</p></li>
         </ol>
         <Form getGify={getGify}/>
