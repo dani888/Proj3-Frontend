@@ -82,13 +82,14 @@ return (
             <h1 className="cursive">{state.user.userName}'s Profile Card</h1><br/>
             <hr />
             <div className="textbox3">
-              <p><u className="orangecolor">USERNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.userName}</p>
-              <p><u className="orangecolor">NICKNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.nickName}</p>
-              <p><u className="orangecolor">LINKEDIN</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.linkedIn}</p>
-              <p><u className="orangecolor">PORTFOLIO</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.portfolio}</p>
-              <p><u className="orangecolor">EMPLOYMENT</u>&nbsp;&nbsp;&nbsp;&nbsp; {state.user.companyName}</p>
-              <p><u className="orangecolor">JOBTITLE</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.jobTitle}</p>
-              <p><u className="orangecolor">HOBBIES</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.hobbies}</p>
+              <p><u className="orangecolor">USERNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.userName}</u></p>
+              <p><u className="orangecolor">NICKNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.nickName}</u></p>
+              <p><u className="orangecolor">EMAIL</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.email}</u></p>
+              <p><u className="orangecolor">LINKEDIN</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.linkedIn}</u></p>
+              <p><u className="orangecolor">PORTFOLIO</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.portfolio}</u></p>
+              <p><u className="orangecolor">EMPLOYMENT</u>&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.companyName}</u></p>
+              <p><u className="orangecolor">JOBTITLE</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.jobTitle}</u></p>
+              <p><u className="orangecolor">HOBBIES</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.hobbies}</u></p>
             </div>
             <hr />
         

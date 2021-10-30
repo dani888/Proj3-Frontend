@@ -79,6 +79,10 @@ function Edit(props) {
                 <input className="width" name="nickName" value={state.user.nickName} onChange={handleChange}/>
                 </label>
                 <label>
+                <span>EMAIL</span>
+                <input className="width" name="email" value={state.user.email} onChange={handleChange}/>
+                </label>
+                <label>
                 <span>LINKEDIN</span>
                 <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} />
                 </label>
