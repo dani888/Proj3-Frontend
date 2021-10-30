@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Table = (props) => {
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
@@ -63,7 +64,11 @@ const Table = (props) => {
                 {/* <td>Jellybean</td>
                 <td>$3.76</td> */}
               
-                <td>{u.companyName}</td>
+                <td>
+                  <Link to={`/table/card/${u._id}`}>
+                  View Card
+                  </Link>
+                </td>
                 {/* <td>Lollipop</td>
                 <td>$7.00</td> */}
               </tr>

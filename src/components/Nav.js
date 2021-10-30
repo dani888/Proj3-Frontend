@@ -80,8 +80,8 @@ const Nav = (props) => {
       </Link>
       {/* <Link to="/"  onClick={logIN2} >
         <div>User Card</div>
-      </Link>
-      <Link to="/"  onClick={logIN3} >
+      </Link> */}
+      {/* <Link to="/table">
         <div>Table</div>
       </Link> */}
       <Link to="/about">

@@ -66,7 +66,6 @@ function Edit(props) {
     return (
     <div className="edit">
         <br />
-        <br />
         <h1 className="cursive">Edit USER Profile</h1><br />
         <div className="textbox4">
             <form className="editform" onSubmit={handleSubmit}>

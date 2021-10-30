@@ -1,18 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import style from "./skeleton.css";
 import { useState, useEffect } from "react";
 
-const Show = (props) => {
-
+const ShowCard = (props) => {
+    
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
-    let location = useLocation();
-    console.log('this is location', location)
-    const path = location.pathname 
     const id = props.match.params;
-    // console.log('id is: ', id)
-    // const URL = `http://localhost:3001/api/table/${id}`;
-    // const id = props.match.params
-    // console.log(id)
 
     const [state, setState] = useState({
         user: [],
@@ -26,7 +19,7 @@ const Show = (props) => {
         async function getUser() {
           if(!props.user) return;
           const token = await props.user.getIdToken();
-          const response = await fetch(`${HEROKURL}api${path}`, {
+          const response = await fetch(`${HEROKURL}api/table/${id.id}`, {
                   method: 'GET',
                   headers: {
                 'Authorization': 'Bearer ' + token
@@ -44,27 +37,7 @@ const Show = (props) => {
       
       console.log('this is state: ', state.user)
 
-//////
-      
-      const deleteCard = async (userId) => {
-        if(!props.user) return;
-        const token = await props.user.getIdToken();
-        await fetch(`${HEROKURL}api${path}`, {
-          method: "DELETE",
-          headers: {
-            'Authorization': 'Bearer ' + token
-          }
-        });
-        // update list of usercards
-        // getUser();
-        props.history.push("/usercard");
-      };
 
-      const removeCard = () => {
-        deleteCard(state.user._id);
-      };
-      
-////// 
 
 return ( 
     <div className="show">
@@ -84,15 +57,11 @@ return (
             <hr />
         
             <div className="flextwo">
-              <Link to="/usercard" ><button className="buttonskel">Back</button></Link>
-                <div id="downer" >
-                <button className="buttonskel" onClick={removeCard}>delete</button>
-                </div>
-              <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
+              <Link to="/table" ><button className="buttonskel">Back</button></Link>
             </div>
             </div>
     </div>
   )
 };
 
-export default Show;
+export default ShowCard;

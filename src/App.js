@@ -9,7 +9,7 @@ import About from './pages/about/About';
 import Table from './pages/table/Table';
 import Show from './pages/show/show';
 import Edit from './pages/show/Edit/Edit';
-
+import CardShow from './pages/table/show/ShowCard';
 import Login from './pages/Login';
 // css imports =>
 // import "./pages/skeleton.css"
@@ -23,6 +23,7 @@ import "./materialize/css/materialize.css"
 //
 
 import { auth } from './services/firebase';
+import ShowCard from './pages/table/show/ShowCard';
 
 function App() {
 
@@ -55,6 +56,11 @@ function App() {
           <Route exact path="/table" render={() => (
             user ? <Table user={user} />: <Redirect to="/table" />
           )} />
+
+          <Route exact path="/table/card/:id" render={(routerProps) => (
+           <ShowCard user={user} {...routerProps} /> )}
+          />
+
           <Route exact path="/table/:id" render={(routerProps) => (
           user ? <Show user={user} {...routerProps} /> : <Redirect to="/usercard" />)}
           />
