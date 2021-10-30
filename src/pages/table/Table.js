@@ -45,7 +45,32 @@ const Table = (props) => {
         <br />
         <h1 className="cursive">Hello USER Table</h1>
         <hr />
-        <table>
+        <table class="highlight centered responsive-table">
+            <thead>
+              <tr>
+                  <th>USERNAME</th>
+                  <th>JOBTITLE</th>
+                  <th>DETAILS</th>
+              </tr>
+            </thead>
+
+          {state.users.map((u) => (
+            <tbody key={u.userName}>
+              <tr>
+                <td>{u.userName}</td>
+
+                <td>{u.jobTitle}</td>
+                {/* <td>Jellybean</td>
+                <td>$3.76</td> */}
+              
+                <td>{u.companyName}</td>
+                {/* <td>Lollipop</td>
+                <td>$7.00</td> */}
+              </tr>
+            </tbody>
+            ))}
+        </table>
+        {/* <table>
             <thead>
                     <tr>
                         <th>userName</th>
@@ -57,8 +82,8 @@ const Table = (props) => {
           <tbody key={u.userName}>
             <tr>
                 <td>
-                    {u.userName}<br />
-                    {u.nickName}<br />
+                    {u.userName}
+                    {u.nickName}
                     {u.companyName}
                 </td>
                 
@@ -72,7 +97,7 @@ const Table = (props) => {
             </tr>
           </tbody>
       ))}
-      </table>
+      </table> */}
       
     </div>
   )

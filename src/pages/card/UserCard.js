@@ -11,6 +11,7 @@ const UserCard = (props) => {
     newUser: {
     userName: "",
     nickName: "",
+    email: "",
     linkedIn: "",
     portfolio: "",
     companyName: "",
@@ -50,6 +51,7 @@ const UserCard = (props) => {
       newUser: {
         userName: "",
         nickName: "",
+        email: "",
         linkedIn: "",
         portfolio: "",
         // employed: false,
@@ -103,46 +105,48 @@ const UserCard = (props) => {
           <hr />
           <div className="textbox2">
             <form onSubmit={handleSubmit}>
-              <label>
-                <span>USERNAME</span>
-                <input name="userName" value={state.newUser.userName} onChange={handleChange}/>
-              </label>
+            <label>
+            <span>USERNAME</span>
+                <input id="textarea2" type="text" autocomplete="off" name="userName" value={state.newUser.userName} onChange={handleChange}/>
+                <label for="textarea2">Ex. Daniel</label>
+                </label>
               <label>
                 <span>NICKNAME</span>
-                <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
+                <label for="textarea2">&nbsp; Ex. Dan &nbsp;</label>
+              </label>
+              <label>
+                <span>EMAIL</span>
+                <input id="textarea2" type="text" autocomplete="off" name="email" value={state.newUser.email} onChange={handleChange}/>
+                <label for="textarea2">&nbsp; Ex. @gmail</label>
               </label>
               <label>
                 <span>LINKEDIN</span>
-                <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+                <label for="textarea2">Ex. http://</label>
               </label>
               <label>
                 <span>PORTFOLIO</span>
-                <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+                <label for="textarea2">Ex. http://</label>
               </label>
-              {/* <label>
-                <span>EMPLOYED?</span>
-                <select name="employed" value={state.newUser.employed} onChange={handleChange}>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </label> */}
               <label>
                 <span>COMPANY NAME</span>
-                <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
+                <label for="textarea2">Ex. Ikea &nbsp;</label>
               </label>
               <label>
                 <span>JOB TITLE</span>
-                <input name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
+                <label for="textarea2">Ex. SWE&nbsp;</label>
               </label>
               <label>
                 <span>HOBBIES</span>
-                <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
+                <label for="textarea2">Ex. Books</label>
               </label>
               <br />
-              <button className="buttonskel">ADD PROFILE CARD</button>
+              <button autocomplete="off" className="buttonskel">ADD PROFILE CARD</button>
             </form>
           </div>
           </section>

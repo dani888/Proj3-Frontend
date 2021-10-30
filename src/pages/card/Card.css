@@ -19,7 +19,7 @@
 }
 
 h1 {
-  margin: 0;
+  margin-top: 0;
 }
 h2 {
   /* color: #f17d80; */
@@ -95,9 +95,9 @@ button:hover {
   background-color: #737495;
 }
 .section {
-  width: 700px;
+  width: 500px;
   height: auto;
-  margin: 0 auto;
+  margin-top: 25px;
 }
 .buttonskel {
   display: inline-block;
