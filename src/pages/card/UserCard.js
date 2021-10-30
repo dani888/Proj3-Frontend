@@ -105,10 +105,10 @@ const UserCard = (props) => {
           <hr />
           <div className="textbox2">
             <form onSubmit={handleSubmit}>
-            <label>
-            <span>USERNAME</span>
-                <input id="textarea2" type="text" autocomplete="off" name="userName" value={state.newUser.userName} onChange={handleChange}/>
-                <label for="textarea2">Ex. Daniel</label>
+              <label>
+              <span>FIRSTNAME LASTNAME</span>
+                <input id="textarea2" type="text" autocomplete="off" name="userName" value={state.newUser.userName} onChange={handleChange} required="true"/>
+                <label for="textarea2">Ex. Daniel W.</label>
                 </label>
               <label>
                 <span>NICKNAME</span>
@@ -117,12 +117,12 @@ const UserCard = (props) => {
               </label>
               <label>
                 <span>EMAIL</span>
-                <input id="textarea2" type="text" autocomplete="off" name="email" value={state.newUser.email} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="email" value={state.newUser.email} onChange={handleChange} required="true"/>
                 <label for="textarea2">&nbsp; Ex. @gmail</label>
               </label>
               <label>
                 <span>LINKEDIN</span>
-                <input id="textarea2" type="text" autocomplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange} required="true"/>
                 <label for="textarea2">Ex. http://</label>
               </label>
               <label>
@@ -137,7 +137,7 @@ const UserCard = (props) => {
               </label>
               <label>
                 <span>JOB TITLE</span>
-                <input id="textarea2" type="text" autocomplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange} required="true"/>
                 <label for="textarea2">Ex. SWE&nbsp;</label>
               </label>
               <label>

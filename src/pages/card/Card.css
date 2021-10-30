@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  height: 120vh;
+  height: 120vh auto;
   display: grid;
   justify-items: center;
   align-items: center;
