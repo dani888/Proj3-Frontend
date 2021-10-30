@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Form = (props) => {
   // state to hold the data of our form
   const [ formState, setFormState ] = useState({
-    searchterm: "g",
+    searchterm: "r",
   });
   const handleSubmit = (event) => {
     // prevent page from refreshing on form submission

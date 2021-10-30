@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const Show = (props) => {
 
+    const HEROKURL = "https://hello-user-api.herokuapp.com/"
     let location = useLocation();
     console.log('this is location', location)
     const path = location.pathname 
@@ -35,7 +36,7 @@ const Show = (props) => {
         async function getUser() {
           if(!props.user) return;
           const token = await props.user.getIdToken();
-          const response = await fetch(`http://localhost:3001/api${path}`, {
+          const response = await fetch(`${HEROKURL}api${path}`, {
                   method: 'GET',
                   headers: {
                 'Authorization': 'Bearer ' + token
@@ -58,8 +59,7 @@ const Show = (props) => {
       const deleteCard = async (userId) => {
         if(!props.user) return;
         const token = await props.user.getIdToken();
-        // make delete request to create usercard
-        await fetch(`http://localhost:3001/api${path}`, {
+        await fetch(`${HEROKURL}api${path}`, {
           method: "DELETE",
           headers: {
             'Authorization': 'Bearer ' + token
@@ -79,29 +79,27 @@ const Show = (props) => {
 return ( 
     <div className="show">
         <div className="flex">
-            <h1>{state.user.userName}'s Profile Card</h1><br/>
+            <h1 className="cursive">{state.user.userName}'s Profile Card</h1><br/>
             <hr />
-            USERNAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.userName}<br />
-            NICKNAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.nickName}<br />
-            LINKEDIN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.linkedIn}<br />
-            PORTFOLIO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.portfolio}<br />
-            EMPLOYMENT:&nbsp;
-            {state.user.companyName}<br />
-            JOBTITLE: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.jobTitle}<br />
-            HOBBIES:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {state.user.hobbies}<br />
-            <hr />
-            <div className="flextwo">
-            <Link to="/usercard"><button className="buttonskel">Back</button></Link>
-            <Link><button className="buttonskel" onClick={removeCard}>delete</button></Link>
-            <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
+            <div className="textbox3">
+              <p><u className="orangecolor">USERNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.userName}</p>
+              <p><u className="orangecolor">NICKNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.nickName}</p>
+              <p><u className="orangecolor">LINKEDIN</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.linkedIn}</p>
+              <p><u className="orangecolor">PORTFOLIO</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.portfolio}</p>
+              <p><u className="orangecolor">EMPLOYMENT</u>&nbsp;&nbsp;&nbsp;&nbsp; {state.user.companyName}</p>
+              <p><u className="orangecolor">JOBTITLE</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.jobTitle}</p>
+              <p><u className="orangecolor">HOBBIES</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.user.hobbies}</p>
             </div>
-        </div>
+            <hr />
+        
+            <div className="flextwo">
+              <Link to="/usercard" ><button className="buttonskel">Back</button></Link>
+                <div id="downer" >
+                <button className="buttonskel" onClick={removeCard}>delete</button>
+                </div>
+              <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
+            </div>
+            </div>
     </div>
   )
 };

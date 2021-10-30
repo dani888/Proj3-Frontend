@@ -3,6 +3,8 @@ import {Link } from "react-router-dom";
 // import "../Card.css";
 
 const UserCard = (props) => {
+  const HEROKURL = "https://hello-user-api.herokuapp.com/"
+
   const [state, setState] = useState({
     users: [],
     // form 
@@ -11,7 +13,6 @@ const UserCard = (props) => {
     nickName: "",
     linkedIn: "",
     portfolio: "",
-    // employed: false,
     companyName: "",
     jobTitle: "",
     hobbies: ""
@@ -33,7 +34,7 @@ const UserCard = (props) => {
     event.preventDefault();
     const token = await props.user.getIdToken();
     const data = {...state.newUser, managedBy: props.user.uid}
-    await fetch('http://localhost:3001/api/card/', {
+    await fetch(`${HEROKURL}api/card/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/json',
@@ -64,7 +65,7 @@ const UserCard = (props) => {
     if(!props.user) return;
     const token = await props.user.getIdToken();
     console.log(token)
-    const response = await fetch('http://localhost:3001/api/table/', {
+    const response = await fetch(`${HEROKURL}api/table/`, {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + token
@@ -84,65 +85,67 @@ const UserCard = (props) => {
   const loaded = () => {
     return (
       <div className="usercard">
-      <section className="section">
-        <h3>{props.user.displayName}'s</h3>
-        <h5>USER CARDS</h5>
-        <hr />
-        {state.users.map((u) => (
-          <article key={u.userName}>
-            <div>{u.userName}</div> 
-            <div>{u.jobTitle}</div>
-            <div>
-            <Link to={`/table/${u._id}`}>
-              Details
-            </Link>
-            </div> 
-          </article>
-        ))}
-        <hr />
-        <form onSubmit={handleSubmit}>
-          <label>
-            <span>USERNAME</span>
-            <input name="userName" value={state.newUser.userName} onChange={handleChange}/>
-          </label>
-          <label>
-            <span>NICKNAME</span>
-            <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
-          </label>
-          <label>
-            <span>LINKEDIN</span>
-            <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
-          </label>
-          <label>
-            <span>PORTFOLIO</span>
-            <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
-          </label>
-          {/* <label>
-            <span>EMPLOYED?</span>
-            <select name="employed" value={state.newUser.employed} onChange={handleChange}>
-              <option value="true">Yes</option>
-              <option value="false">No</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label> */}
-          <label>
-            <span>COMPANY NAME</span>
-            <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
-          </label>
-          <label>
-            <span>JOB TITLE</span>
-            <input name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
-          </label>
-          <label>
-            <span>HOBBIES</span>
-            <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
-          </label>
-          <button className="buttoncard">ADD PROFILE CARD</button>
-        </form>
-        {/* <button onClick={getSkills}>Get Skills</button> */}
-      </section>
+        <section className="section">
+          <h3 className="cursive">{props.user.displayName}'s</h3>
+          <h5 className="cursive">USER CARDS</h5>
+          <hr />
+          {state.users.map((u) => (
+            <article key={u.userName}>
+              <div>{u.userName}</div> 
+              <div>{u.jobTitle}</div>
+              <div>
+              <Link to={`/table/${u._id}`}>
+                Details
+              </Link>
+              </div> 
+            </article>
+          ))}
+          <hr />
+          <div className="textbox2">
+            <form onSubmit={handleSubmit}>
+              <label>
+                <span>USERNAME</span>
+                <input name="userName" value={state.newUser.userName} onChange={handleChange}/>
+              </label>
+              <label>
+                <span>NICKNAME</span>
+                <input name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
+              </label>
+              <label>
+                <span>LINKEDIN</span>
+                <input name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange}/>
+              </label>
+              <label>
+                <span>PORTFOLIO</span>
+                <input name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+              </label>
+              {/* <label>
+                <span>EMPLOYED?</span>
+                <select name="employed" value={state.newUser.employed} onChange={handleChange}>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </label> */}
+              <label>
+                <span>COMPANY NAME</span>
+                <input name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
+              </label>
+              <label>
+                <span>JOB TITLE</span>
+                <input name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange}/>
+              </label>
+              <label>
+                <span>HOBBIES</span>
+                <input name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
+              </label>
+              <br />
+              <button className="buttonskel">ADD PROFILE CARD</button>
+            </form>
+          </div>
+          </section>
       </div>
     );
   }

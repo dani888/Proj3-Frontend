@@ -4,9 +4,7 @@ const GifyDisplay = ({gify}) => {
     const loaded = () => {
     return (
       <>
-        <br/>
-        {/* <h1>{gify.data.title}</h1> */}
-        <br/>
+      <br />
         <img src={gify.data.image_original_url} alt={gify.data.title} />
       </>
     );

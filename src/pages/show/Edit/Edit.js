@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import { useLocation } from "react-router-dom";
 
 function Edit(props) {
-
+    const HEROKURL = "https://hello-user-api.herokuapp.com/"
     const [state, setState] = useState({
         user: {},
       });
@@ -10,7 +10,7 @@ function Edit(props) {
     const id = props.match.params.id;
     console.log('id is: ', id)
     
-    const URL = `http://localhost:3001/api/table/${id}`;
+    const URL = `${HEROKURL}api/table/${id}`;
 
 
     useEffect(() => {
@@ -53,7 +53,7 @@ function Edit(props) {
         // console.log("user",state.user)
         if(!props.user) return;
         const token = await props.user.getIdToken();
-        await fetch(`http://localhost:3001/api/table/${state.user._id}`, {
+        await fetch(`${HEROKURL}api/table/${state.user._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "Application/json",
@@ -67,8 +67,8 @@ function Edit(props) {
     <div className="edit">
         <br />
         <br />
-        <br />
-        <h1>Edit USER Profile</h1><br />
+        <h1 className="cursive">Edit USER Profile</h1><br />
+        <div className="textbox4">
             <form className="editform" onSubmit={handleSubmit}>
                 <label>
                 <span>USERNAME</span>
@@ -108,8 +108,9 @@ function Edit(props) {
                 <span>HOBBIES</span>
                 <input className="width" name="hobbies" value={state.user.hobbies} onChange={handleChange}/>
                 </label>
-                <button className="buttoncard2" >UPDATE PROFILE CARD</button>
+                <button className="buttonskel" >UPDATE PROFILE CARD</button>
             </form>
+        </div>
       </div>
     )
   }

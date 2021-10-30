@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
+  height: 120vh;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -31,7 +31,7 @@ section > article {
   display: flex;
   justify-content: space-between;
   min-width: 25rem;
-  /* max-width: 100%; */
+  max-width: 100%;
   color: white;
   margin: 0.1rem;
   background-color: #737495;
@@ -95,14 +95,14 @@ button:hover {
   background-color: #737495;
 }
 .section {
-  max-width: 450px;
+  width: 700px;
+  height: auto;
   margin: 0 auto;
 }
 .buttonskel {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  /* color: #555; */
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -111,7 +111,6 @@ button:hover {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  /* background-color: transparent; */
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
@@ -120,7 +119,6 @@ button:hover {
   background-color: #282828;
   width: auto;
   height: auto;
-  /* max-height: 94%; */
   border-radius: 17.5px;
 }
 .flex {
@@ -132,4 +130,15 @@ button:hover {
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
+}
+.textbox2 {
+  max-width: 900px;
+  background-color: rgb(255, 255, 255, 0.8);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 0;
 }

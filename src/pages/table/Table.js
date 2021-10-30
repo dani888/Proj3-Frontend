@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 const Table = (props) => {
-  console.log('this is the table page')
+    const HEROKURL = "https://hello-user-api.herokuapp.com/"
+  // console.log('this is the table page')
     const [state, setState] = useState({
         users: [],
         // form 
@@ -16,13 +17,11 @@ const Table = (props) => {
         hobbies: ""
         }
       });
-      console.log('part 2')
       // we need to make an HTTP request localhost:3001/api/skills
       // once we recieve the data, we will use it to set our component state with skills data
       async function getUsers() {
-        console.log('part 3')
         const token = await props.user.getIdToken();
-        const response = await fetch('http://localhost:3001/api/table/all', {
+        const response = await fetch(`${HEROKURL}api/table/all`, {
           method: 'GET',
           headers: {
             'Authorization': 'Bearer ' + token
@@ -43,8 +42,8 @@ const Table = (props) => {
 
   return (
     <div className="table">
-        <br /><br /><br />
-        <h1>This is the Table Component</h1>
+        <br />
+        <h1 className="cursive">Hello USER Table</h1>
         <hr />
         <table>
             <thead>
@@ -58,7 +57,9 @@ const Table = (props) => {
           <tbody key={u.userName}>
             <tr>
                 <td>
-                    {u.userName}
+                    {u.userName}<br />
+                    {u.nickName}<br />
+                    {u.companyName}
                 </td>
                 
                 <td>
