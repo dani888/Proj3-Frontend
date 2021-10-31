@@ -84,11 +84,11 @@ return (
             <hr />
         
             <div className="flextwo">
-              <Link to="/usercard" ><button className="buttonskel">Back</button></Link>
+              <Link to="/usercard" ><button className="buttonskel butn">Back</button></Link>
                 <div id="downer" >
-                <button className="buttonskel" onClick={removeCard}>delete</button>
+                <button className="buttonskel butn" onClick={removeCard}>delete</button>
                 </div>
-              <Link to={`/table/${id.id}/edit`}><button className="buttonskel">Edit</button></Link>
+              <Link to={`/table/${id.id}/edit`}><button className="buttonskel butn">Edit</button></Link>
             </div>
             </div>
     </div>

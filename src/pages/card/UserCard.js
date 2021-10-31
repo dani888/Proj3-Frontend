@@ -127,12 +127,12 @@ const UserCard = (props) => {
               </label>
               <label>
                 <span>PORTFOLIO</span>
-                <input id="textarea2" type="text" autocomplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange} required="true"/>
                 <label for="textarea2">Ex. http://</label>
               </label>
               <label>
                 <span>COMPANY NAME</span>
-                <input id="textarea2" type="text" autocomplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange}/>
+                <input id="textarea2" type="text" autocomplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange} required="true"/>
                 <label for="textarea2">Ex. Ikea &nbsp;</label>
               </label>
               <label>
@@ -147,6 +147,8 @@ const UserCard = (props) => {
               </label>
               <br />
               <button autocomplete="off" className="buttonskel">ADD PROFILE CARD</button>
+              <br />
+              <br />
             </form>
           </div>
           </section>

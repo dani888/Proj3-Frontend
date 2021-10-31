@@ -71,7 +71,7 @@ function Edit(props) {
             <form className="editform" onSubmit={handleSubmit}>
                 <label>
                 <span>USERNAME</span>
-                <input className="width" name="userName" value={state.user.userName} onChange={handleChange}/>
+                <input className="width" name="userName" value={state.user.userName} onChange={handleChange} required="true"/>
                 </label>
                 <label>
                 <span>NICKNAME</span>
@@ -79,15 +79,15 @@ function Edit(props) {
                 </label>
                 <label>
                 <span>EMAIL</span>
-                <input className="width" name="email" value={state.user.email} onChange={handleChange}/>
+                <input className="width" name="email" value={state.user.email} onChange={handleChange} required="true"/>
                 </label>
                 <label>
                 <span>LINKEDIN</span>
-                <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} />
+                <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} required="true"/>
                 </label>
                 <label>
                 <span>PORTFOLIO</span>
-                <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange}/>
+                <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange} required="true"/>
                 </label>
                 {/* <label>
                 <span>EMPLOYED?</span>
@@ -101,11 +101,11 @@ function Edit(props) {
                 </label> */}
                 <label>
                 <span>COMPANY NAME</span>
-                <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange}/>
+                <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange} required="true"/>
                 </label>
                 <label>
                 <span>JOB TITLE</span>
-                <input className="width" name="jobTitle" value={state.user.jobTitle} onChange={handleChange}/>
+                <input className="width" name="jobTitle" value={state.user.jobTitle} onChange={handleChange} required="true"/>
                 </label>
                 <label>
                 <span>HOBBIES</span>

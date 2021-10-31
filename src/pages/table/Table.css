@@ -51,19 +51,18 @@ table {
   
 } */
 
-/* th,
+th,
 td {
-  width: 30%;
-  padding: 8px;
+  width: 33%;
+  /* padding: 800px; */
   text-align: center;
   border-bottom: 1px solid #ddd;
-  background-color: rgb(40, 40, 40, 0.8);
-  border-radius: 10px;
-  color: white;
-} */
-/* th {
-  color: #04aa6d;
+  background-color: rgb(255, 255, 255, 0.4);
+  /* border-radius: 100px; */
+  /* box-sizing: border-box; */
+  /* position: relative; */
+  color: black;
 }
-hr {
-  width: 80%;
-} */
+th {
+  background-color: rgb(241, 125, 128, 0.8);
+}

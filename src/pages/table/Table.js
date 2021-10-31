@@ -46,12 +46,12 @@ const Table = (props) => {
         <br />
         <h1 className="cursive">Hello USER Table</h1>
         <hr />
-        <table class="highlight centered responsive-table">
+        <table className="highlight centered responsive-table">
             <thead>
               <tr>
-                  <th>USERNAME</th>
-                  <th>JOBTITLE</th>
-                  <th>DETAILS</th>
+                  <th><u>USERNAME</u></th>
+                  <th><u>JOBTITLE</u></th>
+                  <th><u>DETAILS</u></th>
               </tr>
             </thead>
 
@@ -59,18 +59,12 @@ const Table = (props) => {
             <tbody key={u.userName}>
               <tr>
                 <td>{u.userName}</td>
-
                 <td>{u.jobTitle}</td>
-                {/* <td>Jellybean</td>
-                <td>$3.76</td> */}
-              
                 <td>
                   <Link to={`/table/card/${u._id}`}>
-                  View Card
+                  <button className="buttonskel">View Card</button>
                   </Link>
                 </td>
-                {/* <td>Lollipop</td>
-                <td>$7.00</td> */}
               </tr>
             </tbody>
             ))}
