@@ -14,6 +14,7 @@ const UserCard = (props) => {
     email: "",
     linkedIn: "",
     portfolio: "",
+    location: "",
     companyName: "",
     jobTitle: "",
     hobbies: ""
@@ -55,6 +56,7 @@ const UserCard = (props) => {
         linkedIn: "",
         portfolio: "",
         // employed: false,
+        location: "",
         companyName: "",
         jobTitle: "",
         hobbies: ""
@@ -129,6 +131,11 @@ const UserCard = (props) => {
                 <span>PORTFOLIO</span>
                 <input id="textarea2" type="text" autocomplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange} required="true"/>
                 <label for="textarea2">Ex. http://</label>
+              </label>
+              <label>
+                <span>LOCATION</span>
+                <input id="textarea2" type="text" autocomplete="off" name="location" value={state.newUser.location} onChange={handleChange} required="true"/>
+                <label for="textarea2">Ex. Boston MA</label>
               </label>
               <label>
                 <span>COMPANY NAME</span>

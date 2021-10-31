@@ -89,16 +89,10 @@ function Edit(props) {
                 <span>PORTFOLIO</span>
                 <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange} required="true"/>
                 </label>
-                {/* <label>
-                <span>EMPLOYED?</span>
-                <select className="width" name="employed" value={state.user.employed} onChange={handleChange}>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                </label> */}
+                <label>
+                <span>LOCATION</span>
+                <input className="width" name="location" value={state.user.location} onChange={handleChange} required="true"/>
+                </label>
                 <label>
                 <span>COMPANY NAME</span>
                 <input className="width" name="companyName" value={state.user.companyName} onChange={handleChange} required="true"/>

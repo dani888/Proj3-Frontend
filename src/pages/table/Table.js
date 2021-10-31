@@ -52,6 +52,7 @@ const Table = (props) => {
                   <th><u>NAME</u></th>
                   <th><u>PROFESSION</u></th>
                   <th><u>EMPLOYED</u></th>
+                  <th><u>LOCATION</u></th>
                   <th><u>DETAILS</u></th>
               </tr>
             </thead>
@@ -66,7 +67,7 @@ const Table = (props) => {
                 :
                 <td>Open to Work</td>
                 }
-                
+                <td>{u.location}</td>
                 <td>
                   <Link to={`/table/card/${u._id}`}>
                   <button className="buttonskel">View Card</button>
