@@ -49,8 +49,9 @@ const Table = (props) => {
         <table className="highlight centered responsive-table">
             <thead>
               <tr>
-                  <th><u>USERNAME</u></th>
-                  <th><u>JOBTITLE</u></th>
+                  <th><u>NAME</u></th>
+                  <th><u>PROFESSION</u></th>
+                  <th><u>EMPLOYED</u></th>
                   <th><u>DETAILS</u></th>
               </tr>
             </thead>
@@ -60,6 +61,12 @@ const Table = (props) => {
               <tr>
                 <td>{u.userName}</td>
                 <td>{u.jobTitle}</td>
+                { u.companyName ?
+                <td>{u.companyName}</td>
+                :
+                <td>Open to Work</td>
+                }
+                
                 <td>
                   <Link to={`/table/card/${u._id}`}>
                   <button className="buttonskel">View Card</button>

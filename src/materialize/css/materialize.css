@@ -3035,7 +3035,7 @@ table.highlight > tbody > tr {
 }
 
 table.highlight > tbody > tr:hover {
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color: rgba(0, 0, 30, 0.3);
 }
 
 table.centered thead tr th,

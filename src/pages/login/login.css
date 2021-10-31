@@ -1,4 +1,4 @@
-.about {
+.loginz {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.1)
@@ -8,27 +8,11 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  height: 170vh;
+  height: 100vh;
+  /* display: grid; */
+  justify-items: center;
+  align-items: center;
   font-size: 25px;
   font-weight: bold;
-  font-family: Arial Narrow, sans-serif;
-}
-
-.textbox {
-  max-width: 900px;
-  background-color: rgb(255, 255, 255, 0.8);
-  text-align: center;
-  margin: auto;
-  width: 60%;
-  height: 150vh;
-  padding: 10px;
-  border-radius: 30px;
-  margin-bottom: 0;
-}
-.leftz {
-  text-align: left;
-  width: 100%;
-}
-.cursive {
   font-family: "Bebas Neue", cursive;
 }

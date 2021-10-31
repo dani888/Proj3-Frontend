@@ -3,7 +3,7 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1582135739786-3bceafcaea85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80");
+    url("https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -53,16 +53,18 @@ table {
 
 th,
 td {
-  width: 33%;
+  width: 25%;
   /* padding: 800px; */
   text-align: center;
   border-bottom: 1px solid #ddd;
   background-color: rgb(255, 255, 255, 0.4);
+  font-size: 15px;
   /* border-radius: 100px; */
   /* box-sizing: border-box; */
   /* position: relative; */
   color: black;
 }
 th {
-  background-color: rgb(241, 125, 128, 0.8);
+  background-color: rgb(241, 125, 128, 0.6);
+  font-size: 15px;
 }

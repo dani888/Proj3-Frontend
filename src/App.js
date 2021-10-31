@@ -9,8 +9,8 @@ import About from './pages/about/About';
 import Table from './pages/table/Table';
 import Show from './pages/show/show';
 import Edit from './pages/show/Edit/Edit';
-import CardShow from './pages/table/show/ShowCard';
-import Login from './pages/Login';
+import ShowCard from './pages/table/show/ShowCard';
+import Login from './pages/login/Login';
 // css imports =>
 // import "./pages/skeleton.css"
 import "./pages/card/Card.css";
@@ -19,11 +19,12 @@ import "./pages/table/Table.css";
 import "./pages/show/show.css";
 import "./pages/welcome/welcome.css";
 import "./pages/show/Edit/edit.css";
+import "./pages/login/login.css";
 import "./materialize/css/materialize.css"
 //
 
 import { auth } from './services/firebase';
-import ShowCard from './pages/table/show/ShowCard';
+
 
 function App() {
 
