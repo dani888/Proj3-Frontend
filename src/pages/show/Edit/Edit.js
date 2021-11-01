@@ -83,11 +83,11 @@ function Edit(props) {
                 </label>
                 <label>
                 <span>LINKEDIN</span>
-                <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} required="true"/>
+                <input className="width" name="linkedIn" value={state.user.linkedIn} onChange={handleChange} />
                 </label>
                 <label>
                 <span>PORTFOLIO</span>
-                <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange} required="true"/>
+                <input className="width" name="portfolio" value={state.user.portfolio} onChange={handleChange} />
                 </label>
                 <label>
                 <span>LOCATION</span>

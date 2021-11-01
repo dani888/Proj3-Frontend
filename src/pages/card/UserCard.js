@@ -109,51 +109,42 @@ const UserCard = (props) => {
             <form onSubmit={handleSubmit}>
               <label>
               <span>FIRSTNAME LASTNAME</span>
-                <input id="textarea2" type="text" autocomplete="off" name="userName" value={state.newUser.userName} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. Daniel W.</label>
-                </label>
+                <input type="text" autoComplete="off" name="userName" value={state.newUser.userName} onChange={handleChange} required={true} placeholder="Daniel Werminghausen"/>
+              </label>
               <label>
                 <span>NICKNAME</span>
-                <input id="textarea2" type="text" autocomplete="off" name="nickName" value={state.newUser.nickName} onChange={handleChange}/>
-                <label for="textarea2">&nbsp; Ex. Dan &nbsp;</label>
+                <input type="text" autoComplete="off" name="nickName" value={state.newUser.nickName} onChange={handleChange} placeholder="Dan"/>
               </label>
               <label>
                 <span>EMAIL</span>
-                <input id="textarea2" type="text" autocomplete="off" name="email" value={state.newUser.email} onChange={handleChange} required="true"/>
-                <label for="textarea2">&nbsp; Ex. @gmail</label>
+                <input type="text" autoComplete="off" name="email" value={state.newUser.email} onChange={handleChange} required={true} placeholder="Daniel.werminghausen@gmail.com"/>
               </label>
               <label>
                 <span>LINKEDIN</span>
-                <input id="textarea2" type="text" autocomplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. http://</label>
+                <input type="text" autoComplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange} required={true} placeholder="https://www.linkedin.com/in/daniel-werminghausen32112333"/>
               </label>
               <label>
                 <span>PORTFOLIO</span>
-                <input id="textarea2" type="text" autocomplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. http://</label>
+                <input type="text" autoComplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange}  placeholder="http://danielwerminghausen.com"/>
               </label>
               <label>
                 <span>LOCATION</span>
-                <input id="textarea2" type="text" autocomplete="off" name="location" value={state.newUser.location} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. Boston MA</label>
+                <input type="text" autoComplete="off" name="location" value={state.newUser.location} onChange={handleChange} required={true} placeholder="Boston MA"/>
               </label>
               <label>
                 <span>COMPANY NAME</span>
-                <input id="textarea2" type="text" autocomplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. Ikea &nbsp;</label>
+                <input type="text" autoComplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange} placeholder="General Assembly"/>
               </label>
               <label>
                 <span>JOB TITLE</span>
-                <input id="textarea2" type="text" autocomplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange} required="true"/>
-                <label for="textarea2">Ex. SWE&nbsp;</label>
+                <input type="text" autoComplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange} required={true} placeholder="Software Engineer"/>
               </label>
               <label>
                 <span>HOBBIES</span>
-                <input id="textarea2" type="text" autocomplete="off" name="hobbies" value={state.newUser.hobbies} onChange={handleChange}/>
-                <label for="textarea2">Ex. Books</label>
+                <input type="text" autoComplete="off" name="hobbies" value={state.newUser.hobbies} onChange={handleChange} placeholder="Running, Reading"/>
               </label>
               <br />
-              <button autocomplete="off" className="buttonskel">ADD PROFILE CARD</button>
+              <button className="buttonskel">ADD PROFILE CARD</button>
               <br />
               <br />
             </form>

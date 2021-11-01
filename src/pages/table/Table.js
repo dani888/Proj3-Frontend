@@ -41,12 +41,54 @@ const Table = (props) => {
         getUsers();
       }, []);
 
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0]
+          
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+      function myFunctionTwo() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput2");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1]
+          
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
   return (
     <div className="table">
         <br />
         <h1 className="cursive">Hello USER Table</h1>
         <hr />
-        <table className="highlight centered responsive-table">
+        <div className="flexsearch">
+          <input type="text" id="myInput" onKeyUp={myFunction} placeholder="Search for names.." title="Type in a name" />&nbsp;&nbsp;&nbsp;
+          <input type="text" id="myInput2" onKeyUp={myFunctionTwo} placeholder="Search for Profession.." title="Type in a Profession" />
+        </div>
+        <table id="myTable" className="highlight centered responsive-table">
             <thead>
               <tr>
                   <th><u>NAME</u></th>
