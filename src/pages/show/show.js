@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 // import style from "./skeleton.css";
 import { useState, useEffect } from "react";
 
+
 const Show = (props) => {
 
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
@@ -35,8 +36,7 @@ const Show = (props) => {
           const user = await response.json();
           // console.log('this is user', user)
           setState((prevState) => ({
-            user,
-            newUser: prevState.newUser
+            user
           }));
         }
         getUser();

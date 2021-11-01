@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const Form = (props) => {
   // state to hold the data of our form
-  const [ formState, setFormState ] = useState({
+  const [ formState ] = useState({
     searchterm: "r",
   });
   const handleSubmit = (event) => {

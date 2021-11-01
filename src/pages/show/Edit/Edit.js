@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
-// import { useLocation } from "react-router-dom";
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
 
 function Edit(props) {
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
@@ -68,7 +71,106 @@ function Edit(props) {
         <br />
         <h1 className="cursive">Edit USER Profile</h1><br />
         <div className="textbox4">
-            <form className="editform" onSubmit={handleSubmit}>
+        <Box 
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ width: '100%', mt: '1rem' }}
+            >
+        <Paper elevation={4} sx={{ width: '100%', p: '1rem' }}  >
+          <form onSubmit={handleSubmit}>
+            <TextField 
+              type="text"
+              autoComplete="off"
+              name="userName"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.userName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="nickName"
+              margin="normal"
+              fullWidth
+              value={state.user.nickName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="email"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.email} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="linkedIn"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.linkedIn} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="portfolio"
+              margin="normal"
+              fullWidth
+              value={state.user.portfolio} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="location"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.location} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="companyName"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.companyName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="jobTitle"
+              margin="normal"
+              fullWidth
+              required
+              value={state.user.jobTitle} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="hobbies"
+              margin="normal"
+              fullWidth
+              value={state.user.hobbies} 
+              onChange={handleChange}
+            />
+            <Button type="submit" variant="contained" fullWidth> ADD PROFILE CARD</Button>
+          </form>
+        </Paper>
+      </Box> 
+            {/* <form className="editform" onSubmit={handleSubmit}>
                 <label>
                 <span>USERNAME</span>
                 <input className="width" name="userName" value={state.user.userName} onChange={handleChange} required="true"/>
@@ -105,8 +207,9 @@ function Edit(props) {
                 <span>HOBBIES</span>
                 <input className="width" name="hobbies" value={state.user.hobbies} onChange={handleChange}/>
                 </label>
+                <br />
                 <button className="buttonskel" >UPDATE PROFILE CARD</button>
-            </form>
+            </form> */}
         </div>
       </div>
     )

@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import "../Card.css";
+
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
+
 
 const UserCard = (props) => {
   const HEROKURL = "https://hello-user-api.herokuapp.com/"
@@ -106,7 +111,115 @@ const UserCard = (props) => {
           ))}
           <hr />
           <div className="textbox2">
-            <form onSubmit={handleSubmit}>
+          <Box 
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ width: '100%', mt: '1rem' }}
+            >
+        <Paper elevation={4} sx={{ width: '100%', p: '1rem' }}  >
+          <form onSubmit={handleSubmit}>
+            <TextField 
+              type="text"
+              autoComplete="off"
+              name="userName"
+              label="First Name Last Name"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.userName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="nickName"
+              label="Nick Name"
+              margin="normal"
+              fullWidth
+              value={state.newUser.nickName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="email"
+              label="Email"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.email} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="linkedIn"
+              label="Linkedin Url"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.linkedIn} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="portfolio"
+              label="Portfolio Url"
+              margin="normal"
+              fullWidth
+              value={state.newUser.portfolio} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="location"
+              label="Location"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.location} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="companyName"
+              label="Company Name"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.companyName} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="jobTitle"
+              label="Your Profession"
+              margin="normal"
+              fullWidth
+              required
+              value={state.newUser.jobTitle} 
+              onChange={handleChange}
+            />
+            <TextField
+              type="text"
+              autoComplete="off"
+              name="hobbies"
+              label="Hobbies you have"
+              margin="normal"
+              fullWidth
+              value={state.newUser.hobbies} 
+              onChange={handleChange}
+            />
+            <Button type="submit" variant="contained" fullWidth> ADD PROFILE CARD</Button>
+          </form>
+        </Paper>
+      </Box> 
+            {/* <form onSubmit={handleSubmit}>
               <label>
               <span>FIRSTNAME LASTNAME</span>
                 <input type="text" autoComplete="off" name="userName" value={state.newUser.userName} onChange={handleChange} required={true} placeholder="Daniel Werminghausen"/>
@@ -147,7 +260,7 @@ const UserCard = (props) => {
               <button className="buttonskel">ADD PROFILE CARD</button>
               <br />
               <br />
-            </form>
+            </form> */}
           </div>
           </section>
       </div>

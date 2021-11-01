@@ -52,12 +52,12 @@ button:hover {
   background-color: #737495;
 }
 .textbox4 {
-  max-width: 700px;
+  max-width: 50%;
+  max-height: 100%;
   background-color: rgb(255, 255, 255, 0.9);
   text-align: center;
   margin: auto;
   width: 100%;
-  height: 62.5%;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 0;
