@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { signIn } from '../../services/firebase';
-// import style from "./skeleton.css";
+import Button from '@mui/material/Button'
+
 
 const Welcome = (props) => {
 
@@ -26,13 +27,12 @@ const Welcome = (props) => {
             <>
             <h1>Welcome to Hello USER </h1><br/>
             <h2><u>{props.user.displayName}</u></h2><br/>
-            <Link to="/usercard"><button className="buttonskelwel">Lets get Started!</button></Link>
+            <Link to="/usercard"><Button variant="contained" fullWidth>Lets get Started!</Button></Link>
             </>
             :
             <>
             <h1>Welcome to Hello USER let's get you started</h1><br/><br />
-            {/* <h2>Please Log in</h2><br/> */}
-            <Link className="login" to="/"  onClick={logIN2} ><button className="buttonskelwel">Log In</button></Link>
+            <Link className="login" to="/"  onClick={logIN2} ><Button variant="contained" fullWidth>Log In</Button></Link>
             </>
           }
         </div>

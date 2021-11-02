@@ -20,7 +20,7 @@ body {
 }
 
 .nav a:hover:not(.active) {
-  background-color: #f17d80;
+  background-color: #1976d2;
   color: white;
 }
 

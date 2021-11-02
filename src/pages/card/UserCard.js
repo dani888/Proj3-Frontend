@@ -111,6 +111,7 @@ const UserCard = (props) => {
           ))}
           <hr />
           <div className="textbox2">
+            <p><b><u>Fill out Form below to Create a Card</u></b></p>
           <Box 
             display="flex"
             justifyContent="center"

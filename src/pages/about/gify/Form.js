@@ -1,5 +1,6 @@
 // import the useState hook from react
 import { useState } from 'react';
+import Button from '@mui/material/Button'
 
 const Form = (props) => {
   // state to hold the data of our form
@@ -17,7 +18,7 @@ const Form = (props) => {
       <hr />
       <form onSubmit={handleSubmit}>
       <br/>
-        <input className="buttonskel" type="submit" value="Get Gif" />
+        <Button variant="contained"  type="submit" value="Get Gif">Get Gif</Button>
       </form>
     </div>
     

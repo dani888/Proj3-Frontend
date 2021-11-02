@@ -5,18 +5,7 @@ const Table = (props) => {
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
   // console.log('this is the table page')
     const [state, setState] = useState({
-        users: [],
-        // form 
-        newUser: {
-        userName: "",
-        nickName: "",
-        linkedIn: "",
-        portfolio: "",
-        employed: false,
-        companyName: "",
-        jobTitle: "",
-        hobbies: ""
-        }
+        users: []
       });
       // we need to make an HTTP request localhost:3001/api/skills
       // once we recieve the data, we will use it to set our component state with skills data
@@ -28,12 +17,10 @@ const Table = (props) => {
             'Authorization': 'Bearer ' + token
           }
         });
-        // console.log('part4')
         console.log('response is : ',response)
         const users = await response.json();
         setState((prevState) => ({
-          users,
-          newUser: prevState.newUser
+          users
         }));
       }
     
@@ -65,11 +52,10 @@ const Table = (props) => {
 // -------------------------------
 
   return (
-    <div className="table">
+    <div className="tablesz">
         <br />
-        <h1 className="cursive">Hello USER Table</h1>
+        <h1 className="cursive">Job Finder User Table</h1>
         <hr />
-        {/* <h5>Search Table:</h5> */}
         <input type="text" id="myInput" onKeyUp={myFunction} placeholder="Search The Table" title="Table Search" />
 
         <table id="myTable" className="highlight centered responsive-table">
@@ -103,8 +89,9 @@ const Table = (props) => {
             </tbody>
             ))}
         </table>
-    </div>
-  )
-};
+        <br />
+      </div>
+    )
+  };
 
 export default Table;
