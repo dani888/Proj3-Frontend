@@ -27,7 +27,7 @@ const About = (props) => {
        <br />
        <br />
        <div className="textbox">
-        <h1><u className="cursive" >About Hello USER</u></h1>
+        <h1><u className="cursive" >About Linked USER</u></h1>
         <ol>
             <li><p className="leftz">The Goal of this application is to efficently store user data for each user that logs in with google. Each user is able to make some profile cards which will be added to the User table where everyone (recruiters) can look for applicants. Each user has thier own idividual UserCard page where they can create edit and delete and manage thier profile cards.</p></li>
             <li><p className="leftz">This Application is an experimentation using Google Firebase to handle users and and MongoDB to handle data.</p></li>

@@ -25,13 +25,13 @@ const Welcome = (props) => {
           {
             props.user ?
             <>
-            <h1>Welcome to Hello USER </h1><br/>
+            <h1>Welcome to Linked USER </h1><br/>
             <h2><u>{props.user.displayName}</u></h2><br/>
             <Link to="/usercard"><Button variant="contained" fullWidth>Lets get Started!</Button></Link>
             </>
             :
             <>
-            <h1>Welcome to Hello USER let's get you started</h1><br/><br />
+            <h1>Welcome to Linked USER let's get you started</h1><br/><br />
             <Link className="login" to="/"  onClick={logIN2} ><Button variant="contained" fullWidth>Log In</Button></Link>
             </>
           }
