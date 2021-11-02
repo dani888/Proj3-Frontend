@@ -27,11 +27,9 @@ const UserCard = (props) => {
   });
 
   function handleChange(event) {
-    // console.log(event.target.value);
-    // setState({...state, skill: event.target.value })
     setState(prevState => ({ 
       ...prevState, 
-      newUser: {...prevState.newUser, // spread existing skills 
+      newUser: {...prevState.newUser, 
       [event.target.name]: event.target.value }
     }));
   }

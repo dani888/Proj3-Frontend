@@ -31,27 +31,35 @@ h2 {
 section > article {
   display: flex;
   justify-content: space-between;
-  min-width: 25rem;
+  /* min-width: 25rem; */
   max-width: 100%;
   color: white;
-  /* margin: 0.1rem; */
-  background-color: #737495;
+  margin-bottom: 0.07rem;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 10px;
 }
 
 article > div {
   padding: 0.5rem;
   width: 35%;
+  background: orange;
+  opacity: 0.9;
+  border-bottom-right-radius: 10px;
 }
 
 article > div:nth-child(2) {
   width: 35%;
   background-color: #1976d2;
   text-align: center;
+  opacity: 0.9;
+  border-bottom-right-radius: 10px;
 }
 article > div:nth-child(3) {
   width: 30%;
   background-color: lightblue;
   text-align: center;
+  opacity: 0.9;
+  border-bottom-right-radius: 10px;
 }
 
 label {
