@@ -59,7 +59,7 @@ const Table = (props) => {
         <hr />
         <input type="text" id="myInput" onKeyUp={myFunction} placeholder="Search The Table" title="Table Search" />
 
-        <table id="myTable" className="highlight centered responsive-table">
+        <table id="myTable" className="highlight centered ">
             <thead>
               <tr>
                   <th><u>NAME</u></th>

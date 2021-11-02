@@ -70,7 +70,7 @@ function Edit(props) {
     <div className="edit">
         <br />
         <h1 className="cursive">Edit Profile Card</h1><br />
-        <div className="textbox4">
+        <div className="textbox5">
         <Box 
             display="flex"
             justifyContent="center"
