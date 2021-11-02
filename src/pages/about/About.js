@@ -29,11 +29,11 @@ const About = (props) => {
        <div className="textbox">
         <h1><u className="cursive" >About Hello USER</u></h1>
         <ol>
-            <li><p className="leftz">The Goal of this application is to efficently store user data for each user that logs and have a collection of all users in a table component </p></li>
-            <li><p className="leftz">This Application is an experimentation using Google Firebase and MongoDB.</p></li>
-            <li><p className="leftz">Experimentating with components, props, event handlers, states and react hooks to implement full crud, (create data/read data/update data/delete data)</p></li>
-            <li><p className="leftz">This Application is using a Mongoose backend which is powering the API data</p></li>
-            <li><p className="leftz">This App experiments with using Firebase Authentication. As well as experiment implementing extra features such as an Api that generates Gifs:</p></li>
+            <li><p className="leftz">The Goal of this application is to efficently store user data for each user that logs in with google. Each user is able to make some profile cards which will be added to the User table where everyone (recruiters) can look for applicants. Each user has thier own idividual UserCard page where they can create edit and delete and manage thier profile cards.</p></li>
+            <li><p className="leftz">This Application is an experimentation using Google Firebase to handle users and and MongoDB to handle data.</p></li>
+            <li><p className="leftz">Experimentating with components, props, event handlers, states, and react hooks to implement full crud, (create data/read data/update data/delete data)</p></li>
+            <li><p className="leftz">This Application is using a Mongoose backend which is managing user data on this site.</p></li>
+            <li><p className="leftz">This App experiments with other cool features such as a search bar, materialize.css for styling. Also neat extra features such as an Api that generates Gifs:</p></li>
         </ol>
         <Form getGify={getGify}/>
         <GifyDisplay gify={gify}/>

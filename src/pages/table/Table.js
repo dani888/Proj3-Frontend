@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Button from '@mui/material/Button'
 
 const Table = (props) => {
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
@@ -82,7 +83,7 @@ const Table = (props) => {
                 <td>{u.location}</td>
                 <td>
                   <Link to={`/table/card/${u._id}`}>
-                  <button className="buttonskel">View Card</button>
+                  <Button variant="contained">View Card</Button>
                   </Link>
                 </td>
               </tr>

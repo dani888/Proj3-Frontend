@@ -8,19 +8,20 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
-  height: 170vh;
+  height: 200vh;
   font-size: 25px;
   font-weight: bold;
   font-family: Arial Narrow, sans-serif;
 }
 
 .textbox {
-  max-width: 1000px;
+  max-width: 900px;
+  max-height: 1500px;
   background-color: rgb(255, 255, 255, 0.8);
   text-align: center;
   margin: auto;
   width: 60%;
-  height: 150vh;
+  height: 170vh;
   padding: 10px;
   border-radius: 30px;
   margin-bottom: 0;
