@@ -96,15 +96,6 @@ return (
                   </tr>
                 </tbody>
               </table>
-              {/* <p><u className="orangecolor">USERNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.userName}</u></p>
-              <p><u className="orangecolor">NICKNAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.nickName}</u></p>
-              <p><u className="orangecolor">EMAIL</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.email}</u></p>
-              <p><u className="orangecolor">LINKEDIN</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><a target="_blank" rel="noreferrer" href={state.user.linkedIn}>{state.user.linkedIn}</a></u></p>
-              <p><u className="orangecolor">PORTFOLIO</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.portfolio}</u></p>
-              <p><u className="orangecolor">LOCATION</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.location}</u></p>
-              <p><u className="orangecolor">EMPLOYMENT</u>&nbsp;&nbsp; <u>{state.user.companyName}</u></p>
-              <p><u className="orangecolor">JOBTITLE</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.jobTitle}</u></p>
-              <p><u className="orangecolor">HOBBIES</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>{state.user.hobbies}</u></p> */}
             </div>
             <hr />
         

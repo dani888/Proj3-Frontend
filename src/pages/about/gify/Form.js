@@ -4,8 +4,8 @@ import Button from '@mui/material/Button'
 
 const Form = (props) => {
   // state to hold the data of our form
-  const [ formState ] = useState({
-    searchterm: "r",
+  const [ formState, setFormState ] = useState({
+    searchterm: "g",
   });
   const handleSubmit = (event) => {
     // prevent page from refreshing on form submission

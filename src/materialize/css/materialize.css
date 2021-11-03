@@ -3035,7 +3035,7 @@ table.highlight > tbody > tr {
 }
 
 table.highlight > tbody > tr:hover {
-  background-color: rgba(0, 0, 30, 0.3);
+  background-color: rgba(242, 242, 242, 0.5);
 }
 
 table.centered thead tr th,
@@ -6256,7 +6256,7 @@ label {
 
 /* Text inputs */
 input:not([type]),
-/* input[type="text"]:not(.browser-default), */
+input[type="text"]:not(.browser-default),
 input[type="password"]:not(.browser-default),
 input[type="email"]:not(.browser-default),
 input[type="url"]:not(.browser-default),
@@ -6275,8 +6275,8 @@ textarea.materialize-textarea {
   outline: none;
   height: 3rem;
   width: 100%;
-  font-size: 16px;
-  /* margin: 0 0 8px 0; */
+  /* font-size: 16px; */
+  margin: 8px 8px 0px 8px;
   padding: 0;
   -webkit-box-shadow: none;
   box-shadow: none;

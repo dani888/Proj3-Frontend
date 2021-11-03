@@ -2,10 +2,11 @@
 
 const GifyDisplay = ({gify}) => {
     const loaded = () => {
+      console.log(gify.data.images.original.url)
     return (
       <>
       <br />
-        <img src={gify.data.image_original_url} alt={gify.data.title} />
+        <img src={gify.data.images.original.url} alt={gify.data.title} />
       </>
     );
   };

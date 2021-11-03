@@ -7,7 +7,9 @@ import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
 
 
+
 const UserCard = (props) => {
+
   const HEROKURL = "https://hello-user-api.herokuapp.com/"
 
   const [state, setState] = useState({
@@ -109,7 +111,7 @@ const UserCard = (props) => {
           ))}
           <hr />
           <div className="textbox2">
-            <p><b><u>Fill out Form below to Create a Card</u></b></p>
+            <b><u>Fill out Form below to Create a Card</u></b>
           <Box 
             display="flex"
             justifyContent="center"
@@ -218,48 +220,6 @@ const UserCard = (props) => {
           </form>
         </Paper>
       </Box> 
-            {/* <form onSubmit={handleSubmit}>
-              <label>
-              <span>FIRSTNAME LASTNAME</span>
-                <input type="text" autoComplete="off" name="userName" value={state.newUser.userName} onChange={handleChange} required={true} placeholder="Daniel Werminghausen"/>
-              </label>
-              <label>
-                <span>NICKNAME</span>
-                <input type="text" autoComplete="off" name="nickName" value={state.newUser.nickName} onChange={handleChange} placeholder="Dan"/>
-              </label>
-              <label>
-                <span>EMAIL</span>
-                <input type="text" autoComplete="off" name="email" value={state.newUser.email} onChange={handleChange} required={true} placeholder="Daniel.werminghausen@gmail.com"/>
-              </label>
-              <label>
-                <span>LINKEDIN</span>
-                <input type="text" autoComplete="off" name="linkedIn" value={state.newUser.linkedIn} onChange={handleChange} required={true} placeholder="https://www.linkedin.com/in/daniel-werminghausen32112333"/>
-              </label>
-              <label>
-                <span>PORTFOLIO</span>
-                <input type="text" autoComplete="off" name="portfolio" value={state.newUser.portfolio} onChange={handleChange}  placeholder="http://danielwerminghausen.com"/>
-              </label>
-              <label>
-                <span>LOCATION</span>
-                <input type="text" autoComplete="off" name="location" value={state.newUser.location} onChange={handleChange} required={true} placeholder="Boston MA"/>
-              </label>
-              <label>
-                <span>COMPANY NAME</span>
-                <input type="text" autoComplete="off" name="companyName" value={state.newUser.companyName} onChange={handleChange} placeholder="General Assembly"/>
-              </label>
-              <label>
-                <span>JOB TITLE</span>
-                <input type="text" autoComplete="off" name="jobTitle" value={state.newUser.jobTitle} onChange={handleChange} required={true} placeholder="Software Engineer"/>
-              </label>
-              <label>
-                <span>HOBBIES</span>
-                <input type="text" autoComplete="off" name="hobbies" value={state.newUser.hobbies} onChange={handleChange} placeholder="Running, Reading"/>
-              </label>
-              <br />
-              <button className="buttonskel">ADD PROFILE CARD</button>
-              <br />
-              <br />
-            </form> */}
           </div>
           </section>
       </div>

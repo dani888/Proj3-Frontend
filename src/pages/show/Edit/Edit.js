@@ -4,7 +4,27 @@ import Button from '@mui/material/Button'
 import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
 
+import { useMemo } from 'react'
+import useDarkMode from '../../../components/useDarkMode'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import MaterialUISwitch from "../../../components/MaterialUiSwitch";
+import Switch from '@mui/material/Switch';
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline';
+import FormGroup from '@mui/material/FormGroup'
+
 function Edit(props) {
+
+    const [ mode, toggleMode ] = useDarkMode()
+
+    const theme = useMemo(
+      () => createTheme({
+        palette: {
+          mode: mode,
+        }
+      }), [mode]
+    )
+
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
     const [state, setState] = useState({
         user: {},
@@ -67,17 +87,30 @@ function Edit(props) {
     };
 
     return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
     <div className="edit">
         <br />
         <h1 className="cursive">Edit Profile Card</h1><br />
         <div className="textbox5">
-        <Box 
+            <FormGroup>
+            <FormControlLabel 
+              control={<MaterialUISwitch sx={{ m: 1 }} />}
+              checked={mode === 'dark'}
+              onChange={toggleMode}
+              label={''}
+            />
+            </FormGroup>
+            
+            <Box 
             display="flex"
             justifyContent="center"
             alignItems="center"
-            sx={{ width: '100%', mt: '1rem' }}
+            border-raduis="10px"
+            sx={{ width: '100%', mt: '2rem' }}
             >
                 <Paper elevation={4} sx={{ width: '100%', p: '1rem' }}  >
+                Edit Card:
                 <form onSubmit={handleSubmit}>
                     <TextField 
                     type="text"
@@ -171,7 +204,10 @@ function Edit(props) {
                 </Paper>
             </Box> 
         </div>
+        <br />
+        <br />
       </div>
+      </ThemeProvider>
     )
   }
   

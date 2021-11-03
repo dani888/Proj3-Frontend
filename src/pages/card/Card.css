@@ -13,10 +13,12 @@
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh, auto;
-  /* height: 130vh; */
   display: grid;
   justify-items: center;
   align-items: center;
+}
+span {
+  color: white;
 }
 
 h1 {
@@ -150,4 +152,5 @@ button:hover {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 0;
+  overflow: auto;
 }

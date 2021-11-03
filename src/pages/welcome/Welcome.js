@@ -1,12 +1,14 @@
-import React from "react";
+// import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { signIn } from '../../services/firebase';
 import Button from '@mui/material/Button'
 
 
+
 const Welcome = (props) => {
 
-  console.log(props.user)
+
+  // console.log(props.user)
   const history = useHistory()
 
   async function logIN2() {
