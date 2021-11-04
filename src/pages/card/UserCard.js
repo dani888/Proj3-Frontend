@@ -73,7 +73,7 @@ const UserCard = (props) => {
   async function getUsers() {
     if(!props.user) return;
     const token = await props.user.getIdToken();
-    console.log(token)
+    // console.log(token)
     const response = await fetch(`${HEROKURL}api/table/`, {
       method: 'GET',
       headers: {

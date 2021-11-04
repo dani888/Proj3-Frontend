@@ -15,7 +15,7 @@ const About = (props) => {
     );
     // parse JSON response into a javascript object
     const data = await response.json();
-    console.log(data)
+    // console.log(data)
     // set the Movie state to the movie
     setGify(data);
   };

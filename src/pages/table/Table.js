@@ -18,7 +18,7 @@ const Table = (props) => {
             'Authorization': 'Bearer ' + token
           }
         });
-        console.log('response is : ',response)
+        // console.log('response is : ',response)
         const users = await response.json();
         setState((prevState) => ({
           users

@@ -31,7 +31,7 @@ function Edit(props) {
       });
 
     const id = props.match.params.id;
-    console.log('id is: ', id)
+    // console.log('id is: ', id)
     
     const URL = `${HEROKURL}api/table/${id}`;
 
@@ -47,7 +47,7 @@ function Edit(props) {
                 }
                 });
             const user = await response.json();
-            console.log(user)
+            // console.log(user)
             setState({
               user
             });

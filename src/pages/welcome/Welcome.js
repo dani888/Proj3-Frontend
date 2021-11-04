@@ -17,7 +17,7 @@ const Welcome = (props) => {
         history.push('/')
     }
     catch(error){
-        console.log('not working')
+        // console.log('not working')
     }
 }
 

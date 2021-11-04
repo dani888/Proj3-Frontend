@@ -7,7 +7,7 @@ const Show = (props) => {
 
     const HEROKURL = "https://hello-user-api.herokuapp.com/"
     let location = useLocation();
-    console.log('this is location', location)
+    // console.log('this is location', location)
     const path = location.pathname 
     const id = props.match.params;
 
@@ -39,7 +39,7 @@ const Show = (props) => {
         getUser();
        }, );
       
-      console.log('this is state: ', state.user)
+      // console.log('this is state: ', state.user)
 
 //////
       

@@ -2,7 +2,7 @@
 
 const GifyDisplay = ({gify}) => {
     const loaded = () => {
-      console.log(gify.data.images.original.url)
+      // console.log(gify.data.images.original.url)
     return (
       <>
       <br />
