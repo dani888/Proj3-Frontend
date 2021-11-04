@@ -33,7 +33,7 @@ const ShowCard = (props) => {
           }));
         }
         getUser();
-       }, []);
+       }, );
       
     //   console.log('this is state: ', state.user)
 

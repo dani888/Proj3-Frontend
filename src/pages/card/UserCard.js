@@ -89,7 +89,7 @@ const UserCard = (props) => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, );
 
   const loaded = () => {
     return (

@@ -27,7 +27,7 @@ const Table = (props) => {
     
       useEffect(() => {
         getUsers();
-      }, []);
+      }, );
 // ww3 schools.com search table feature --------
         function myFunction() {
           var input, filter, search, table, tr, td, i, j;

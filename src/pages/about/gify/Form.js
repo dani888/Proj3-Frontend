@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 
 const Form = (props) => {
   // state to hold the data of our form
-  const [ formState, setFormState ] = useState({
+  const [ formState ] = useState({
     searchterm: "g",
   });
   const handleSubmit = (event) => {

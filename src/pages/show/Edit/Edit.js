@@ -8,7 +8,7 @@ import { useMemo } from 'react'
 import useDarkMode from '../../../components/useDarkMode'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import MaterialUISwitch from "../../../components/MaterialUiSwitch";
-import Switch from '@mui/material/Switch';
+// import Switch from '@mui/material/Switch';
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline';
 import FormGroup from '@mui/material/FormGroup'
@@ -53,7 +53,8 @@ function Edit(props) {
             });
           }
         getuser();
-      }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [props.user, URL]);
 
     function handleChange(event) {
       setState(prevState => ({ 
