@@ -2,7 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import { logOut, signIn } from '../services/firebase';
 
 const Nav = (props) => {
-    console.log(props.user)
+    // console.log(props.user)
     const history = useHistory()
     // console.log('this is history: ', history)
 
@@ -15,24 +15,6 @@ const Nav = (props) => {
             console.log('not working')
         }
     }
-    // async function logIN2() {
-    //     try{
-    //         await signIn()
-    //         history.push('/usercard')
-    //     }
-    //     catch(error){
-    //         console.log('not working')
-    //     }
-    // }
-    // async function logIN3() {
-    //     try{
-    //         await signIn()
-    //         history.push('/table')
-    //     }
-    //     catch(error){
-    //         console.log('not working')
-    //     }
-    // }
 
   return (
     <div className="nav">
