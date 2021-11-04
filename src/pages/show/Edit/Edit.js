@@ -176,7 +176,6 @@ function Edit(props) {
                     name="companyName"
                     margin="normal"
                     fullWidth
-                    required
                     value={state.user.companyName} 
                     onChange={handleChange}
                     />
