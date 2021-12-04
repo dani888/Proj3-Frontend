@@ -31,7 +31,7 @@ A full Crud single page app (SPA) react application. This experimental applicati
   create update and delete thier profile cards
 - All users who are signed in also have access to the table page where all user cards are nicely displayed for example recruiters to check out <br>
 - Welcome to a small replica of LinkedIn <br>
-  https://pedantic-pare-effe56.netlify.app/
+  https://linked-user.netlify.app/
 
 ## Future Enhancements
 
